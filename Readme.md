@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Анасов](https://up.htmlacademy.ru/adaptive/17/user/997177).
-* Наставник: `Неизвестно`.
+* Наставник: [Наталья 😺 Майстренко](https://htmlacademy.ru/profile/natalie).
 
 ---
 
