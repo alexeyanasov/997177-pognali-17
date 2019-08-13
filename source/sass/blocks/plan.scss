@@ -1,9 +1,53 @@
+.plan {
+  position: relative;
+
+  @include section-width;
+  background: linear-gradient(to top, $additional-hover-color 40px, $main-background-color 40px);
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: $main-background-color;
+    border-radius: 0 0 40px 40px;
+  }
+}
+
+
 .plan__inner {
-  @include container;
+  padding: 50px 82px 26px 35px;
+  border-radius: 0 0 40px 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 130px 150px 40px 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 150px 40px 185px 130px;
+  }
+}
+
+.plan__header {
+  margin-bottom: 55px;
+
+  @include section-header-text;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 150px;
+  }
 }
 
 .plan__features {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
 }
 
 .plan__feature-item {
@@ -11,24 +55,47 @@
   vertical-align: center;
   width: 185px;
 
-  font-family: $main-ffamily;
-  font-size: 16px;
-  font-weight: $light;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.38;
-  letter-spacing: normal;
-  text-align: left;
+  @include main-text;
   color: $main-text-color;
+
+  @media (min-width: $tablet-width) {
+    width: 562px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: $main-fsize-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 812px;
+  }
 }
 
 .plan__button {
   background: none;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: $detail-fsize-tablet;
+  }
+}
+
+.plan__button:hover,
+.plan__button:focus {
+  background: none;
+  opacity: 0.7;
+}
+
+.plan__button:active {
+  background: none;
+  opacity: 0.3;
 }
 
 .plan__button-business {
+  width: 220px;
+  margin: 0 auto;
   font-family: $main-ffamily;
-  font-size: 16px;
+  font-size: $main-fsize-mobile;
   font-weight: $bold;
   font-style: normal;
   font-stretch: normal;
@@ -36,11 +103,49 @@
   letter-spacing: normal;
   text-align: left;
   color: $additional-hover-color;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-left: 80px;
+    width: 355px;
+    font-size: $detail-fsize-tablet;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: 0;
+      width: 67px;
+      height: 67px;
+      background-color: $accent-background-color;
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 30px;
+      left: 27px;
+      width: 17px;
+      height: 21px;
+      background-image: url("../../img/business.svg");
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .plan__button-close {
   font-family: $main-ffamily;
-  font-size: 16px;
+  font-size: $main-fsize-mobile;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -49,4 +154,8 @@
   text-align: center;
   text-transform: uppercase;
   color: $additional-accent-color;
+}
+
+.plan--business {
+  display: none;
 }

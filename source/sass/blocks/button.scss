@@ -1,14 +1,15 @@
-.button {
+.button-main {
+  position: relative;
   box-sizing: border-box;
   display: inline-block;
   width: 270px;
-  min-height: 62px;
+  height: 62px;
   padding-left: 24px;
-  padding-top: 22px;
+  padding-top: 24px;
 
   color: $additional-accent-color;
   font-family: $main-ffamily;
-  font-size: 18px;
+  font-size: $additional-fsize-mobile;
   font-weight: $bold;
   font-style: normal;
   font-stretch: normal;
@@ -18,12 +19,96 @@
   background-color: $accent-color;
 
   border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 31px;
+    right: 23px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 14px solid #1d2e5b;
+  }
+
+
+  &:hover,
+  &:focus {
+    background-color: $accent-hover-color;
+  }
+
+  &:active {
+    color: $additional-accent-active-color;
+  }
+
+  &:--outline {
+    border: 3px solid $additional-accent-color;
+  }
+
+  &--outline:hover,
+  &--outline:focus {
+    color: $additional-background-color;
+    background-color: $additional-accent-color;
+  }
+
+  &--outline:hover::before,
+  &--outline:focus::before {
+    border-left: 14px solid $additional-background-color;
+  }
+
+  &--outline:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--outline:active::before {
+    border-left: 14px solid rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 618px;
+    height: 81px;
+    font-size: $accent-fsize-tablet;
+    padding-left: 34px;
+    padding-top: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 274px;
+  }
 }
 
-.button:hover {
-  background-color: $accent-hover-color;
-}
+.button-accent {
+  width: 189px;
+  min-height: 40px;
+  border-radius: 20px;
 
-.button:active {
-  color: $additional-accent-active-color;
+  color: $additional-accent-color;
+  font-family: $main-ffamily;
+  font-size: $additional-fsize-mobile;
+  font-weight: $bold;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $accent-color;
+
+  cursor: pointer;
+
+  &--wide {
+    width: 230px;
+  }
+
+  &--white {
+    background-color: $additional-background-color;
+  }
+
+  &--blue {
+    background-color: $additinal-detail-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 50px;
+  }
 }
