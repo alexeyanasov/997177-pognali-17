@@ -1,0 +1,122 @@
+.social {
+  @include list-none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+
+  &--footer {
+    margin-bottom: 37px;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  transition: background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-blue-color;
+  }
+
+  &:hover .social__link-icon,
+  &:focus .social__link-icon {
+    fill: $white;
+  }
+
+  &:active .social__link-icon {
+    fill: rgba($white, 0.3);
+  }
+
+  &--footer {
+    background-color: $color-yellow;
+    border-radius: 50%;
+  }
+
+  &--facebook {
+    background-image: url("../../img/facebook.svg");
+    background-position: center;
+    background-size: 11px 21px;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+
+  &--vk {
+    background-image: url("../../img/vk.svg");
+    background-position: center;
+    background-size: 23px 12px;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+
+  &--instagram {
+    background-image: url("../../img/instagram.svg");
+    background-position: center;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+}
+
+.social__link-icon {
+  transition: fill 0.3s;
+
+  &--vk {
+    width: 23px;
+    height: 12px;
+  }
+
+  &--instagram {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@include respond-above($tablet) {
+  .social--top-menu {
+    justify-content: flex-start;
+    padding-left: 64px;
+  }
+
+  .social--footer {
+    margin-bottom: 0;
+  }
+
+  .social__link {
+    width: 60px;
+    height: 60px;
+
+    &--facebook {
+      background-size: 14px 28px;
+    }
+
+    &--vk {
+      background-size: 31px 16px;
+    }
+
+    &--instagram {
+      background-size: 24px 24px;
+    }
+  }
+
+  .social__link-icon {
+    &--facebook {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vk {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}

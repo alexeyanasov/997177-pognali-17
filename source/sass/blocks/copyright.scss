@@ -1,0 +1,47 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid $border-pale-gray-color;
+  transition: color 0.5s;
+
+  &:hover .copyright__logo,
+  &:hover .copyright__text,
+  &:focus .copyright__logo,
+  &:focus .copyright__text {
+    opacity: 0.6;
+  }
+
+  &:active .copyright__logo,
+  &:active .copyright__text {
+    opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  font-weight: 400;
+  color: $text-dark-grey;
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  transition: opacity 0.3s;
+}
+
+@include respond-above($tablet) {
+  .copyright {
+    justify-content: flex-start;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .copyright__text {
+    font-size: 20px;
+  }
+
+  .copyright__logo {
+    margin-left: 24px;
+  }
+}

@@ -1,77 +1,242 @@
-.transport-list {
+.transport {
+  @include list-none;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  width: 125px;
+  margin: 0 auto;
+
+  &--check {
+    justify-content: flex-start;
+    width: auto;
+    margin: 0;
+    margin-top: 12px;
+  }
 }
 
-.transport-item {
+.users__transport {
+  justify-content: flex-start;
+  margin-top: 14px;
+}
+
+.profile__transport {
+  justify-content: center;
+  margin-top: 0;
+  padding: 15px 0;
+}
+
+.transport__item--users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $bg-snuff-color;
+
+  .transport__image--plane {
+    width: 14px;
+    height: 16px;
+  }
+
+  .transport__image--bus {
+    width: 13px;
+    height: 16px;
+  }
+
+  .transport__image--bicycle {
+    width: 19px;
+    height: 17px;
+  }
+
+  .transport__image--walk {
+    width: 15px;
+    height: 17px;
+  }
+}
+
+.transport__image {
+  margin: auto;
+  opacity: 0.3;
+
+  &--plane {
+    width: 19px;
+    height: 21px;
+  }
+
+  &--bus {
+    width: 17px;
+    height: 21px;
+  }
+
+  &--bicycle {
+    width: 24px;
+    height: 21px;
+  }
+
+  &--walk {
+    width: 20px;
+    height: 21px;
+  }
+}
+
+.transport__item--active .transport__image {
+  opacity: 1;
+}
+
+.transport__label {
   position: relative;
+  display: block;
   width: 33px;
   height: 33px;
-  background-repeat: no-repeat;
-
-  &--circle-blue {
-    background-color: $main-background-color;
-    border-radius: 50%;
-
-    @media (min-width: $tablet-width) {
-      background-color: transparent;
-    }
-  }
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
 
   &::before {
-    position: absolute;
     content: "";
-    top: 8px;
-    left: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
     background-repeat: no-repeat;
-    opacity: 0.15;
-  }
-
-  &--selected::before {
+    background-position: center;
     opacity: 1;
+    transition: opacity 0.3s;
   }
 
   &--plane::before {
-    width: 14px;
-    height: 16px;
-    background-image: url("/img/plane.svg");
-
-    @media (min-width: $tablet-width) {
-      width: 19px;
-      height: 21px;
-    }
+    background-image: url("../img/icons/plane.svg");
+    background-size: 14px 16px;
   }
 
   &--bus::before {
-    width: 13px;
-    height: 16px;
-    background-image: url("/img/bus.svg");
+    background-image: url("../img/icons/bus.svg");
+    background-size: 13px 16px;
+  }
 
-    @media (min-width: $tablet-width) {
+  &--bicycle::before {
+    background-image: url("../img/icons/bike.svg");
+    background-size: 19px 17px;
+  }
+
+  &--walk::before {
+    background-image: url("../img/icons/run.svg");
+    background-size: 15px 17px;
+  }
+}
+
+.transport__label:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.transport__checkbox:checked:active + .transport__label {
+  background-color: $bg-snuff-color;
+}
+
+.transport__checkbox:checked:active + .transport__label::before {
+  opacity: 0.3;
+}
+
+.transport__checkbox:not(:checked) + .transport__label::before {
+  opacity: 0.15;
+}
+
+.transport__checkbox:not(:checked):hover + .transport__label {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.transport__checkbox:not(:checked):hover + .transport__label::before {
+  opacity: 0.3;
+}
+
+.transport__checkbox:not(:checked):active + .transport__label {
+  background-color: $bg-snuff-color;
+}
+
+.transport__checkbox:not(:checked):active + .transport__label::before {
+  opacity: 0.1;
+}
+
+@include respond-above($tablet) {
+  .users__transport {
+    flex-direction: column;
+    align-items: flex-end;
+    width: auto;
+    margin: 0;
+  }
+
+  .profile__transport {
+    padding: 25px 0;
+  }
+
+  .transport__item--users {
+    background-color: transparent;
+
+    .transport__image--plane {
+      width: 19px;
+      height: 21px;
+    }
+
+    .transport__image--bus {
       width: 17px;
       height: 21px;
     }
-  }
 
-  &--bike::before {
-    width: 19px;
-    height: 17px;
-    background-image: url("/img/bike.svg");
-
-    @media (min-width: $tablet-width) {
+    .transport__image--bicycle {
       width: 24px;
       height: 21px;
     }
-  }
 
-  &--hike::before {
-    width: 15px;
-    height: 17px;
-    background-image: url("/img/run.svg");
-
-    @media (min-width: $tablet-width) {
+    .transport__image--walk {
       width: 20px;
       height: 21px;
     }
+  }
+
+  .transport--check .transport__label {
+    width: 43px;
+    height: 43px;
+
+    &::before {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--plane::before {
+      background-size: 19px 21px;
+      background-position: center;
+    }
+
+    &--bus::before {
+      background-size: 17px 21px;
+    }
+
+    &--bicycle::before {
+      background-size: 24px 21px;
+    }
+
+    &--walk::before {
+      background-size: 20px 21px;
+    }
+  }
+}
+
+@include respond-between($tablet, $desktop) {
+  .transport--check {
+    margin-top: 0;
+  }
+
+  .transport--check .transport__item:not(:last-child) {
+    margin-right: 13px;
+  }
+}
+
+@include respond-above($desktop) {
+  .users__transport {
+    flex-direction: row;
+    width: auto;
   }
 }

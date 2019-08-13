@@ -1,14 +1,36 @@
 .user-list {
-  @include reset-list;
-  display: flex;
-  align-items: center;
+  @include list-none;
+  width: 100%;
+  text-align: center;
+
+
+  &--top-menu {
+    margin-bottom: 50px;
+  }
 }
 
-.user-list__login {
-  width: 270px;
-  height: 50px;
-  padding-top: 15px;
-  border-radius: 25px;
+.user-list__link {
+  color: $dark-blue;
+  font-size: 17px;
+  line-height: 30px;
   text-transform: uppercase;
-  text-align: center;
+  background-color: $color-yellow;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-dark-yellow;
+  }
+
+  &:active {
+    color: rgba($dark-blue, 0.3);
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &--top-menu {
+    padding: 5px 21px;
+  }
 }

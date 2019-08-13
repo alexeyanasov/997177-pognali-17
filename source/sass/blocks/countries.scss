@@ -1,0 +1,40 @@
+.countries {
+  @include list-none();
+  margin-top: 17px;
+  margin-bottom: 15px;
+  padding-left: 48px;
+}
+
+.countries__item {
+  color: $text-blue-color;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-bottom: 7px;
+  }
+}
+
+@include respond-above($tablet) {
+  .countries {
+    display: flex;
+    padding-left: 16px;
+  }
+
+  .countries__item {
+    font-size: 20px;
+    line-height: 30px;
+
+    &:not(:last-child) {
+      margin-right: 75px;
+    }
+  }
+}
+
+@include respond-above($desktop) {
+  .countries {
+    display: block;
+  }
+}

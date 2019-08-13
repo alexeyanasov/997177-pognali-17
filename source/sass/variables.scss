@@ -1,61 +1,41 @@
-$accent-color: #ffd74b;
-$accent-hover-color: #ff8d30;
-$accent-minor-color: #ffbd30;
-$accent-minor-hover-color: #ff8d30;
-$accent-active-color: rgba(255, 189, 48, 0.3);
-$accent-secondary-color: #ffa530;
-$additional-accent-color: #161c35;
-$additional-accent-active-color: rgba(22, 28, 53, 0.3);
+$bg-blue-color: #192144;
+$dark-blue: #161c35;
+$dark-slate-blue: #1d2e5b;
+$bg-whisper-color: #edeff6;
+$bg-light-whisper: #f3f4f8;
+$bg-snuff-color: #e2e5f2;
+$bg-light-periwinkle: #dfe3f0;
+$bg-periwinkle: #d4d9eb;
+$bg-dark-perwinkle: #c8cee8;
+$white: #ffffff;
+$black: #000000;
+$blue-black: #141b3b;
+$bg-icon: #121936;
+$tablet-bg-dark-blue: #182044;
+$desktop-bg-dark-blue: #161c34;
 
-$online-color: #81e31e;
-$offline-color: #f97676;
+$color-yellow: #ffd74b;
+$color-dark-yellow: #ffbd30;
+$color-orange: #ff8d30;
+$color-dark-orange: #f26926;
+$color-light-orange: #ffa530;
+$color-dirty-yellow: #f3c72b;
+$color-carrot: #ff5c23;
+$color-light-rose: #f9eaea;
+$color-rose: #f97676;
+$color-stone-gray: #808285;
+$color-error: #ff0000;
 
-$main-background-color: #edeff6;
-$accent-background-color: #e2e5f2;
-$additional-background-color: #ffffff;
+$text-dark-grey: #444444;
+$text-light-grey: #d5d5d5;
+$text-blue-color: #1d2e5b;
+$text-light-blue: #132576;
 
-$main-text-color: #444444;
-$main-text-hover-color: rgba(68, 68, 68, 0.6);
-$main-text-active-color: rgba(68, 68, 68, 0.3);
-$main-title-color: $accent-hover-color;
-$accent-title-color: #1d2e5b;
-$accent-title-hover-color: rgba(29, 46, 91, 0.7);
+$border-ghost-color: #cbced9;
+$border-pale-gray-color: #f2f2f2;
+$border-input: #959bb2;
+$border-textarea: #aeb4cb;
+$border-checkbox-focus: #5faafc;
 
-$additional-hover-color: #192144;
-
-$detail-color: #d6daed;
-$additinal-detail-color: #dfe3f0;
-$accent-detail-color: #f3c72b;
-
-$border-color: #cbced9;
-$border-hover-color: #aeb4cb;
-$border-active-color: $additional-accent-color;
-
-$error-color: #f47e7e;
-$error-background-color: #ffefef;
-$error-additional-color: #f9eaea;
-
-$main-ffamily: "BloggerSans", "Arial", sans-serif;
-
-$light: 300;
-$normal: 400;
-$medium: 500;
-$bold: 700;
-
-$main-fsize-mobile: 16px;
-$header-fsize-mobile: 24px;
-$accent-fsize-mobile: 21px;
-$additional-fsize-mobile: 18px;
-$detail-fsize-mobile: 14px;
-
-$main-fsize-tablet: 28px;
-$header-fsize-tablet: 45px;
-$accent-fsize-tablet: 24px;
-$additional-fsize-tablet: 21px;
-$detail-fsize-tablet: 20px;
-
-$mobile-width: 320px;
-$tablet-width: 768px;
-$desktop-width: 1440px;
-
-$mobile-content-width: 270px;
+$tablet: 768px;
+$desktop: 1440px;

@@ -1,0 +1,57 @@
+.continents {
+  @include list-none();
+  flex-basis: 100%;
+  margin: 35px 0 22px;
+}
+
+.continents__item {
+  color: rgba($bg-blue-color, 0.3);
+  text-transform: uppercase;
+  transition: color 0.3s;
+
+  &--active {
+    color: $bg-blue-color;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba($bg-blue-color, 0.6);
+  }
+
+  &:active {
+    color: $bg-blue-color;
+  }
+}
+
+@include respond-above($tablet) {
+  .continents {
+    order: -1;
+    flex-wrap: wrap;
+    flex-basis: 63%;
+    margin: 0;
+  }
+
+  .continents__item {
+    font-size: 20px;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+
+    &:first-child {
+      margin-right: 25px;
+    }
+  }
+}
+
+@include respond-above($desktop) {
+  .continents {
+    flex-basis: 59%;
+  }
+}

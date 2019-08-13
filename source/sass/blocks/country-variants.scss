@@ -1,0 +1,32 @@
+.country-variants {
+  @include list-none();
+  flex-basis: 100%;
+  margin-bottom: 22px;
+}
+
+.country-variants__item {
+  color: $text-dark-grey;
+  font-weight: 400;
+}
+
+@include respond-above($tablet) {
+  .country-variants {
+    flex-basis: 28%;
+    margin-top: 60px;
+  }
+
+  .country-variants__item {
+    font-size: 20px;
+    line-height: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+@include respond-above($desktop) {
+  .country-variants {
+    display: none;
+  }
+}
