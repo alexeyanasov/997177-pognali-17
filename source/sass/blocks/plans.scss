@@ -1,0 +1,140 @@
+.plans {
+  @include section-top-border-radius;
+  position: relative;
+  z-index: 1;
+  padding: 26px 0 76px;
+  background-color: $bg-light-periwinkle;
+}
+
+.plans__title {
+  margin: 0;
+  margin-bottom: 26px;
+  color: $dark-slate-blue;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.plans__list {
+  @include list-none;
+}
+
+.plans__item {
+  padding: 21px 24px;
+  background-color: $white;
+  border-radius: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.plans__country {
+  position: relative;
+  margin: 0;
+  margin-bottom: 15px;
+  padding-left: 17px;
+  color: $dark-slate-blue;
+  font-size: 16px;
+  line-height: 16px;
+
+  &::before {
+    content: attr(data-order);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.plans__date,
+.plans__text {
+  margin: 0;
+  margin-bottom: 5px;
+  color: $dark-slate-blue;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.plans__date {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.plans__btn {
+  @include btn-default;
+  color: rgba($black, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.6);
+  }
+
+  &:active {
+    color: rgba($black, 0.1);
+  }
+}
+
+@include respond-above($tablet) {
+  .plans {
+    padding: 50px 0 154px;
+  }
+
+  .plans__container {
+    padding: 0 74px;
+  }
+
+  .plans__item {
+    padding: 33px 0 16px;
+  }
+
+  .plans__title {
+    margin-bottom: 36px;
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .plans__country {
+    padding-left: 37px;
+    margin-bottom: 27px;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      left: auto;
+      right: 32px;
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+  }
+
+  .plans__desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 33px;
+    padding-right: 36px;
+    padding-top: 15px;
+    border-top: 1px solid $bg-light-periwinkle;
+  }
+
+  .plans__date,
+  .plans__text {
+    margin: 0;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  .plans__btn {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+}

@@ -1,0 +1,100 @@
+.level {
+  position: absolute;
+  left: 17px;
+  top: 16px;
+  width: 60px;
+  height: 60px;
+  padding-top: 10px;
+  color: $white;
+  text-align: center;
+  background-color: rgba($black, 0.6);
+  border-radius: 50%;
+}
+
+.level__progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.level__value {
+  position: relative;
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 31px;
+    height: 1px;
+    background-color: $white;
+    transform: translateX(-50%);
+  }
+}
+
+.level__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.users__level {
+  position: relative;
+  margin-top: 20px;
+
+  .level__progress {
+    width: 45px;
+    height: 45px;
+    left: -3px;
+    top: -12px;
+  }
+
+  .level__value {
+    color: $dark-slate-blue;
+    line-height: 18px;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .level__text {
+    display: none;
+  }
+}
+
+.profile__level {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+
+  .level__value {
+    color: $dark-blue;
+    font-size: 38px;
+    line-height: 38px;
+
+    &::after {
+      width: 49px;
+      height: 2px;
+      background-color: $border-ghost-color;
+    }
+  }
+
+  .level__text {
+    color: $text-dark-grey;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@include respond-above($tablet) {
+  .profile__level {
+    order: 1;
+    width: 94px;
+    height: 94px;
+  }
+}

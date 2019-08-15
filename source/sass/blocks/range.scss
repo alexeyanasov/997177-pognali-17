@@ -1,0 +1,153 @@
+.range__output {
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.range__input {
+  max-width: 110px;
+  width: 100%;
+  padding: 7px;
+  border: 1px solid $border-ghost-color;
+  font: inherit;
+  color: $dark-blue;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  outline: none;
+  background-color: $white;
+  transition: border 0.3s;
+
+  &::placeholder {
+    color: $dark-blue;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    border: solid 1px $border-input;
+  }
+
+  &:focus {
+    border: solid 1px $dark-blue;
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &--left {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: none;
+  }
+
+  &--right {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+  }
+}
+
+.range__scale {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgba($dark-slate-blue, 0.2);
+}
+
+.range__bar {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  width: 145px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: $dark-slate-blue;
+}
+
+.range__toggle {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: $dark-slate-blue;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: width 0.1s, height 0.1s, box-shadow 0.3s;
+
+  &--min {
+    left: 60px;
+  }
+
+  &--max {
+    left: 208px;
+  }
+
+  &:hover {
+    width: 13px;
+    height: 13px;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(29, 46, 91, 0.35);
+  }
+}
+
+@include respond-between($tablet, $desktop) {
+  .range__wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .range__output {
+    margin: 0;
+  }
+
+  .range__input {
+    width: 75px;
+  }
+
+  .range__controls {
+    width: 56%;
+  }
+}
+
+@include respond-above($tablet) {
+  .range__input {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  .range__bar {
+    width: 72%;
+    left: auto;
+    right: 0;
+  }
+
+  .range__toggle--min {
+    left: 28%;
+  }
+
+  .range__toggle--max {
+    left: auto;
+    right: 0;
+  }
+}
+
+@include respond-above($desktop) {
+  .range__output {
+    margin: 20px 0 36px;
+  }
+
+  .range__controls {
+    width: 100%;
+  }
+}

@@ -1,18 +1,153 @@
 .about {
-  background-color: $additional-hover-color;
+  @include section-border-radius;
+  position: relative;
+  z-index: 6;
+  margin-top: -42px;
+  padding: 30px 0 80px;
+  color: $white;
+  background-color: $bg-blue-color;
+  overflow: hidden;
 }
 
-.about__inner {
+.about__wrap {
+  position: relative;
+  z-index: 2;
+  padding-left: 24px;
 
-  min-height: 352px;
-  margin-left: 18px;
-  padding-top: 32px;
-  padding-left: 32px;
-  padding-right: 53px;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -27px;
+    width: 292px;
+    height: 352px;
+    background-image: url("../img/about-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 
-  color: $additional-background-color;
+.about__title {
+  @include h2-heading;
+  position: relative;
+  margin-bottom: 18px;
 
-  background-image: url("../img/about-mobile@1x.png");
-  background-size: 292px 352px;
-  background-repeat: no-repeat;
+  &::after {
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    left: -30px;
+    top: -27px;
+    width: 113px;
+    height: 132px;
+    background-color: $blue-black;
+    border-radius: 20px;
+  }
+}
+
+.about__text {
+  max-width: 212px;
+  font-weight: 300;
+
+  &--accent {
+    font-weight: 700;
+  }
+}
+
+.about__btn {
+  display: none;
+}
+
+@include respond-above($tablet) {
+  .about {
+    @include section-border-radius-tablet;
+    margin-top: -45px;
+    padding-bottom: 88px;
+  }
+
+  .about__title {
+    @include h2-heading-tablet;
+    margin-bottom: 25px;
+  }
+
+  .about__wrap {
+    padding-left: 35px;
+
+    &::before {
+      right: -45px;
+      width: 376px;
+      height: 548px;
+      background-image: url("../img/about-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+
+    &::after {
+      left: 0;
+      top: -43px;
+      width: 100%;
+      height: 213px;
+    }
+  }
+
+  .about__text {
+    @include text-size-tablet;
+    max-width: 300px;
+    margin-bottom: 30px;
+
+    &--accent {
+      margin-bottom: 47px;
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  .about__btn {
+    position: relative;
+    display: block;
+    max-width: 274px;
+    padding: 28px 34px 29px;
+  }
+}
+
+@include respond-above($desktop) {
+  .about {
+    margin-top: -170px;
+    padding-top: 223px;
+    padding-bottom: 163px;
+  }
+
+  .about__title {
+    margin-bottom: 45px;
+
+    &::after {
+      top: -62px;
+      left: -71px;
+      width: 213px;
+      height: 213px;
+    }
+  }
+
+  .about__wrap {
+    padding-left: 72px;
+
+    &::before {
+      top: -72px;
+      right: 26px;
+      width: 630px;
+      height: 665px;
+      background-image: url("../img/about-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+  }
+
+  .about__text {
+    max-width: 612px;
+
+    &--accent {
+      max-width: 410px;
+      margin-bottom: 80px;
+    }
+  }
 }

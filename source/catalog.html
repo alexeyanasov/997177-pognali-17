@@ -1,346 +1,1121 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>HTML Academy: Погнали</title>
-  </head>
-  <body>
-    <header class="header">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Погнали? - Попутчики</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header header--closed header--nojs inner-header">
+  <div class="header__container container">
+    <div class="header__wrap">
       <a href="index.html" class="header__logo">
-        <img src="http://placehold.it/100x19" class="header__logo-image" width="100px" height="19px" alt="Погнали?"/>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
+          <img class="header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип приложения Погнали?">
+        </picture>
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-
-        <div class="main-nav__wrap">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="service.html">О сервисе</a>
+      <button class="header__btn-toggle" type="button" aria-label="Кнопка открытия/закрытия мобильного меню">
+      </button>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__menu menu">
+        <li class="menu__item">
+          <a href="#" class="menu__link menu__link--current">
+              <span class="menu__link-text" data-hover="О сервисе">
+                О сервисе
+              </span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="form.html" class="menu__link">
+              <span class="menu__link-text" data-hover="Направления">
+                Направления
+              </span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="catalog.html" class="menu__link">
+              <span class="menu__link-text" data-hover="Попутчики">
+                Попутчики
+              </span>
+          </a>
+        </li>
+      </ul>
+      <ul class="header__auth user-list user-list--top-menu">
+        <li class="user-list__item">
+          <a href="#" class="user-list__link inner-btn btn">
+            Авторизация
+          </a>
+        </li>
+      </ul>
+      <ul class="header__contacts contacts contacts--menu">
+        <li class="contacts__item">
+          <div class="contacts__icon">
+            <svg class="contacts__icon-image contacts__icon-image--phone" version="1.1" id="Layer_1" width="36" height="36" fill="#ffd74b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 36" style="enable-background: new 0 0 36 36;" xml:space="preserve">
+                <path class="st0" d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5
+                  c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3
+                  c0,0.8,0.7,1.5,1.5,1.5c0.1,0,0.1,0,0.2,0c2.2,0.2,5.8,0.5,5.9,0.5c0.8,0,1.5-0.7,1.5-1.5c0-0.1,0-0.3,0-0.3
+                  c-0.2-2.1-0.9-5.5-2.8-7.4C30.8,1.1,24.4,0,18,0z M18,19.5c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S19.7,19.5,18,19.5z
+                  M15.7,12.7v-1.9c0-1-0.8-1.9-1.9-1.9S12,9.8,12,10.9v1.9L1.9,23.6c-0.7,0.7-1.1,1.6-1.1,2.7v3c0,1.7,1.3,3,3,3h0.8v1.9
+                  c0,1,0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9v-1.9h19.5v1.9c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-1.9h0.8c1.7,0,3-1.3,3-3v-3
+                  c0-1.1-0.4-2-1.1-2.7L24,12.7v-1.9c0-1-0.8-1.9-1.9-1.9s-1.9,0.8-1.9,1.9v1.9H15.7z M18,16.5c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6
+                  c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z"/>
+              </svg>
+          </div>
+          <a href="tel:88005558628" class="contacts__link">
+            8 800 555-86-28
+          </a>
+        </li>
+        <li class="contacts__item">
+          <div class="contacts__icon">
+            <?xml version="1.0" encoding="utf-8"?>
+            <svg class="contacts__icon-image contacts__icon-image--email" version="1.1" id="Layer_1" width="36" height="26" fill="#ffd74b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 26" style="enable-background: new 0 0 36 26;" xml:space="preserve">
+                <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+                  c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+                  L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+                  c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
+              </svg>
+          </div>
+          <a href="mailto:mail@htmlacademy.ru" class="contacts__link">
+            mail@htmlacademy.ru
+          </a>
+        </li>
+      </ul>
+      <ul class="offer__contacts info--catalog">
+          <li class="info__item">
+            <a class="info__link info__link--phone" href="tel:88005558628" aria-label="Ссылка на телефон приложения Погнали?">
+              <img src="img/icons/topmenu-phone.svg" width="18" height="18" alt="Иконка телефона">
+            </a>
+          </li>
+          <li class="info__item">
+            <a class="info__link info__link--mail" href="mailto:mail@htmlacademy.ru" aria-label="Ссылка на почту приложения Погнали?">
+              <img src="img/icons/topmenu-mail.svg" width="18" height="14" alt="Иконка почтового конверта">
+            </a>
+          </li>
+          <li class="info__item">
+            <ul class="info__auth user-list">
+              <li class="user-list__item">
+                <a href="#" class="user-list__link user-list__link--top-menu inner-btn btn">
+                  Авторизация
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      <ul class="header__social social social--top-menu">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--facebook" aria-label="Ссылка на Фейсбук приложения Погнали?">
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--vk" aria-label="Ссылка на Вконтакте приложения Погнали?">
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--instagram" aria-label="Ссылка на Инстаграмм приложения Погнали?">
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="inner-header-wrap">
+      <h1 class="inner-header__title">
+        Попутчики
+      </h1>
+      <a class="inner-header__link" href="index.html">
+        На главную
+      </a>
+    </div>
+  </div>
+</header>
+<main class="main-catalog">
+  <section class="country-filters country-filters--closed country-filters--nojs">
+    <div class="country-filters__container container">
+      <div class="country-filters__wrap">
+        <h3 class="country-filters__title">
+          Фильтрация по странам
+        </h3>
+        <button type="button" class="country-filters__toggle" aria-label="Кнопка открытия/закрытия фильтра по странам">
+        </button>
+        <ul class="country-filters__list continents">
+          <li class="continents__item continents__item--active">
+            Европа
+          </li>
+          <li class="continents__item">
+            Азия
+          </li>
+          <li class="continents__item">
+            Америка
+          </li>
+          <li class="continents__item">
+            Острова
+          </li>
+        </ul>
+        <ul class="country-filters__list alphabet">
+          <li class="alphabet__cell alphabet__cell--active">
+            А
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Австралия</li>
+              <li class="alphabet__item">Австрия</li>
+              <li class="alphabet__item">Азербайджан</li>
+              <li class="alphabet__item">Албания</li>
+              <li class="alphabet__item">Алжир</li>
+              <li class="alphabet__item">Ангола</li>
+              <li class="alphabet__item">Андорра</li>
+              <li class="alphabet__item">Антигуа и Барбуда</li>
+              <li class="alphabet__item">Аргентина</li>
+              <li class="alphabet__item">Армения</li>
+              <li class="alphabet__item">Афганистан</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Б
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Багамские Острова</li>
+              <li class="alphabet__item">Бангладеш</li>
+              <li class="alphabet__item">Барбадос</li>
+              <li class="alphabet__item">Бахрейн</li>
+              <li class="alphabet__item">Белоруссия</li>
+              <li class="alphabet__item">Белиз</li>
+              <li class="alphabet__item">Бельгия</li>
+              <li class="alphabet__item">Бенин</li>
+              <li class="alphabet__item">Болгария</li>
+              <li class="alphabet__item">Боливия</li>
+              <li class="alphabet__item">Босния и Герцеговина</li>
+              <li class="alphabet__item">Ботсвана</li>
+              <li class="alphabet__item">Бразилия</li>
+              <li class="alphabet__item">Бруней</li>
+              <li class="alphabet__item">Буркина-Фасо</li>
+              <li class="alphabet__item">Бурунди</li>
+              <li class="alphabet__item">Бутан</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            В
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Вануату</li>
+              <li class="alphabet__item">Великобритания</li>
+              <li class="alphabet__item">Венгрия</li>
+              <li class="alphabet__item">Венесуэла</li>
+              <li class="alphabet__item">Восточный Тимор</li>
+              <li class="alphabet__item">Вьетнам</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Г
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Габон</li>
+              <li class="alphabet__item">Гаити</li>
+              <li class="alphabet__item">Гайана</li>
+              <li class="alphabet__item">Гамбия</li>
+              <li class="alphabet__item">Гана</li>
+              <li class="alphabet__item">Гватемала</li>
+              <li class="alphabet__item">Гвинея</li>
+              <li class="alphabet__item">Гвинея-Бисау</li>
+              <li class="alphabet__item">Германия</li>
+              <li class="alphabet__item">Гондурас</li>
+              <li class="alphabet__item">Гренада</li>
+              <li class="alphabet__item">Греция</li>
+              <li class="alphabet__item">Грузия</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Д
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Дания
+              <li class="alphabet__item">Джибути</li>
+              <li class="alphabet__item">Доминика</li>
+              <li class="alphabet__item">Доминикана</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Е
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Египет</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            З
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Замбия</li>
+              <li class="alphabet__item">Зимбабве</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            И
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Израиль</li>
+              <li class="alphabet__item">Индия</li>
+              <li class="alphabet__item">Индонезия</li>
+              <li class="alphabet__item">Иордания</li>
+              <li class="alphabet__item">Ирак</li>
+              <li class="alphabet__item">Иран</li>
+              <li class="alphabet__item">Ирландия</li>
+              <li class="alphabet__item">Исландия</li>
+              <li class="alphabet__item">Испания</li>
+              <li class="alphabet__item">Италия</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            К
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Кабо-Верде</li>
+              <li class="alphabet__item">Казахстан</li>
+              <li class="alphabet__item">Камбоджа</li>
+              <li class="alphabet__item">Камерун</li>
+              <li class="alphabet__item">Канада</li>
+              <li class="alphabet__item">Катар</li>
+              <li class="alphabet__item">Кения</li>
+              <li class="alphabet__item">Кипр</li>
+              <li class="alphabet__item">Киргизия</li>
+              <li class="alphabet__item">Кирибати</li>
+              <li class="alphabet__item">Китай</li>
+              <li class="alphabet__item">Колумбия</li>
+              <li class="alphabet__item">Коморы</li>
+              <li class="alphabet__item">Конго</li>
+              <li class="alphabet__item">КНДР</li>
+              <li class="alphabet__item">Республика Корея</li>
+              <li class="alphabet__item">Коста-Рика</li>
+              <li class="alphabet__item">Кот-д’Ивуар</li>
+              <li class="alphabet__item">Куба</li>
+              <li class="alphabet__item">Кувейт</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Л
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Лаос</li>
+              <li class="alphabet__item">Латвия</li>
+              <li class="alphabet__item">Лесото</li>
+              <li class="alphabet__item">Либерия</li>
+              <li class="alphabet__item">Ливан</li>
+              <li class="alphabet__item">Ливия</li>
+              <li class="alphabet__item">Литва</li>
+              <li class="alphabet__item">Лихтенштейн</li>
+              <li class="alphabet__item">Люксембург</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            М
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Маврикий</li>
+              <li class="alphabet__item">Мавритания</li>
+              <li class="alphabet__item">Мадагаскар</li>
+              <li class="alphabet__item">Малави</li>
+              <li class="alphabet__item">Малайзия</li>
+              <li class="alphabet__item">Мали</li>
+              <li class="alphabet__item">Мальдивы</li>
+              <li class="alphabet__item">Мальта</li>
+              <li class="alphabet__item">Марокко</li>
+              <li class="alphabet__item">Маршалловы Острова</li>
+              <li class="alphabet__item">Мексика</li>
+              <li class="alphabet__item">Мозамбик</li>
+              <li class="alphabet__item">Молдавия</li>
+              <li class="alphabet__item">Монако</li>
+              <li class="alphabet__item">Монголия</li>
+              <li class="alphabet__item">Мьянма</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Н
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Намибия</li>
+              <li class="alphabet__item">Науру</li>
+              <li class="alphabet__item">Непал</li>
+              <li class="alphabet__item">Нигер</li>
+              <li class="alphabet__item">Нигерия</li>
+              <li class="alphabet__item">Нидерланды</li>
+              <li class="alphabet__item">Никарагуа</li>
+              <li class="alphabet__item">Новая Зеландия</li>
+              <li class="alphabet__item">Норвегия</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            О
+            <ul class="alphabet__list">
+              <li class="alphabet__item">ОАЭ</li>
+              <li class="alphabet__item">Оман</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            П
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Пакистан</li>
+              <li class="alphabet__item">Палау</li>
+              <li class="alphabet__item">Панама</li>
+              <li class="alphabet__item">Папуа — Новая Гвинея</li>
+              <li class="alphabet__item">Парагвай</li>
+              <li class="alphabet__item">Перу</li>
+              <li class="alphabet__item">Польша</li>
+              <li class="alphabet__item">Португалия</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell alphabet__cell--r">
+            Р
+          </li>
+          <li class="alphabet__cell">
+            С
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Сальвадор</li>
+              <li class="alphabet__item">Самоа</li>
+              <li class="alphabet__item">Сан-Марино</li>
+              <li class="alphabet__item">Сан-Томе и Принсипи</li>
+              <li class="alphabet__item">Саудовская Аравия</li>
+              <li class="alphabet__item">Северная Македония</li>
+              <li class="alphabet__item">Сейшелы</li>
+              <li class="alphabet__item">Сенегал</li>
+              <li class="alphabet__item">Сент-Люсия</li>
+              <li class="alphabet__item">Сербия</li>
+              <li class="alphabet__item">Сингапур</li>
+              <li class="alphabet__item">Сирия</li>
+              <li class="alphabet__item">Словакия</li>
+              <li class="alphabet__item">Словения</li>
+              <li class="alphabet__item">США</li>
+              <li class="alphabet__item">Сомали</li>
+              <li class="alphabet__item">Судан</li>
+              <li class="alphabet__item">Суринам</li>
+              <li class="alphabet__item">Сьерра-Леоне</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Т
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Таджикистан</li>
+              <li class="alphabet__item">Таиланд</li>
+              <li class="alphabet__item">Танзания</li>
+              <li class="alphabet__item">Того</li>
+              <li class="alphabet__item">Тонга</li>
+              <li class="alphabet__item">Тринидад и Тобаго</li>
+              <li class="alphabet__item">Тувалу</li>
+              <li class="alphabet__item">Тунис</li>
+              <li class="alphabet__item">Туркмения</li>
+              <li class="alphabet__item">Турция</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            У
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Уганда</li>
+              <li class="alphabet__item">Узбекистан</li>
+              <li class="alphabet__item">Украина</li>
+              <li class="alphabet__item">Уругвай</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Ф
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Фиджи</li>
+              <li class="alphabet__item">Филиппины</li>
+              <li class="alphabet__item">Финляндия</li>
+              <li class="alphabet__item">Франция</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Х
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Хорватия</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Ч
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Чад</li>
+              <li class="alphabet__item">Черногория</li>
+              <li class="alphabet__item">Чехия</li>
+              <li class="alphabet__item">Чили</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Ш
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Швейцария</li>
+              <li class="alphabet__item">Швеция</li>
+              <li class="alphabet__item">Шри-Ланка</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Э
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Эквадор</li>
+              <li class="alphabet__item">Эритрея</li>
+              <li class="alphabet__item">Эсватини</li>
+              <li class="alphabet__item">Эстония</li>
+              <li class="alphabet__item">Эфиопия</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Ю
+            <ul class="alphabet__list">
+              <li class="alphabet__item">ЮАР</li>
+              <li class="alphabet__item">Южный Судан</li>
+            </ul>
+          </li>
+          <li class="alphabet__cell">
+            Я
+            <ul class="alphabet__list">
+              <li class="alphabet__item">Ямайка</li>
+              <li class="alphabet__item">Япония</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="country-filters__list country-variants">
+          <li class="country-variants__item">
+            Афганистан
+          </li>
+          <li class="country-variants__item">
+            Албания
+          </li>
+          <li class="country-variants__item">
+            Алгерия
+          </li>
+          <li class="country-variants__item">
+            Андорра
+          </li>
+          <li class="country-variants__item">
+            Аргентина
+          </li>
+          <li class="country-variants__item">
+            Армения
+          </li>
+          <li class="country-variants__item">
+            Австралия
+          </li>
+          <li class="country-variants__item">
+            Австрия
+          </li>
+          <li class="country-variants__item">
+            Азербайджан
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="country-filters__btn">
+        Cвернуть
+      </button>
+    </div>
+  </section>
+  <div class="container">
+    <div class="catalog-wrap">
+      <section class="search-mate">
+        <h2 class="search-mate__title">
+          Подберите идеального попутчика
+        </h2>
+        <form action="https://echo.htmlacademy.ru" method="post" class="search-mate__form">
+          <ul class="search-mate__list">
+            <li class="search-mate__item">
+              <h3 class="search-mate__measure">
+                Хобби
+              </h3>
+              <fieldset class="search-mate__variants">
+                <ul class="search-mate__group search-mate__group--check">
+                  <li class="search-mate__wrap">
+                    <input class="search-mate__checkbox visually-hidden" id="fitness" name="hobby" type="checkbox" checked>
+                    <label class="search-mate__label" for="fitness">
+                      Спортзал
+                    </label>
+                  </li>
+                  <li class="search-mate__wrap">
+                    <input class="search-mate__checkbox visually-hidden" id="hookah" name="hobby" type="checkbox">
+                    <label class="search-mate__label" for="hookah">
+                      Кальян
+                    </label>
+                  </li>
+                  <li class="search-mate__wrap">
+                    <input class="search-mate__checkbox visually-hidden" id="sofa" name="hobby" type="checkbox">
+                    <label class="search-mate__label" for="sofa">
+                      Диван
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">Направления</a>
+            <li class="search-mate__item">
+              <h3 class="search-mate__measure">
+                Mузыка
+              </h3>
+              <fieldset class="search-mate__variants">
+                <ul class="search-mate__group search-mate__group--check">
+                  <li class="search-mate__wrap">
+                    <input class="search-mate__checkbox visually-hidden" id="hard-rock" name="music" type="checkbox" checked>
+                    <label class="search-mate__label" for="hard-rock">
+                      Тяжелый рок
+                    </label>
+                  </li>
+                  <li class="search-mate__wrap">
+                    <input class="search-mate__checkbox visually-hidden" id="russian-rap" name="music" type="checkbox">
+                    <label class="search-mate__label" for="russian-rap">
+                      Русский рэп
+                    </label>
+                  </li>
+                  <li class="search-mate__wrap">
+                    <input class="search-mate__checkbox visually-hidden" id="eurodance" name="music" type="checkbox">
+                    <label class="search-mate__label" for="eurodance">
+                      Евроденс
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
             </li>
-            <li class="site-list__item site-list__item--active">
-              <a href="catalog.html">Попутчики</a>
+            <li class="search-mate__item">
+              <h3 class="search-mate__measure">
+                Еда
+              </h3>
+              <fieldset class="search-mate__variants">
+                <ul class="search-mate__group search-mate__group--check">
+                  <li class="search-mate__wrap">
+                    <input class="search-mate__checkbox visually-hidden" id="meat" name="food" type="checkbox" checked>
+                    <label class="search-mate__label" for="meat">
+                      Мясоед
+                    </label>
+                  </li>
+                  <li class="search-mate__wrap">
+                    <input class="search-mate__checkbox visually-hidden" id="healthy-food" name="food" type="checkbox">
+                    <label class="search-mate__label" for="healthy-food">
+                      Сидит на ПП
+                    </label>
+                  </li>
+                  <li class="search-mate__wrap">
+                    <input class="search-mate__checkbox visually-hidden" id="vegan" name="food" type="checkbox">
+                    <label class="search-mate__label" for="vegan">
+                      Веган-сыроед
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
+            <li class="search-mate__item">
+              <h3 class="search-mate__measure">
+                Транспорт
+              </h3>
+              <fieldset class="search-mate__variants">
+                <ul class="search-mate__transport transport transport--check">
+                  <li class="transport__item">
+                    <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-plane" checked>
+                    <label class="transport__label transport__label--plane" for="checkbox-plane" aria-label="Чекбокс для выбора вид транспорта"></label>
+                  </li>
+                  <li class="transport__item">
+                    <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-bus">
+                    <label class="transport__label transport__label--bus" for="checkbox-bus" aria-label="Чекбокс для выбора вид транспорта"></label>
+                  </li>
+                  <li class="transport__item">
+                    <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-bicycle">
+                    <label class="transport__label transport__label--bicycle" for="checkbox-bicycle" aria-label="Чекбокс для выбора вид транспорта"></label>
+                  </li>
+                  <li class="transport__item">
+                    <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" id="checkbox-walk">
+                    <label class="transport__label transport__label--walk" for="checkbox-walk" aria-blabel="Чекбокс для выбора вид транспорта"></label>
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
+            <li class="search-mate__item">
+              <h3 class="search-mate__measure">
+                Левел
+              </h3>
+              <fieldset class="search-mate__variants range">
+                <div class="range__wrap">
+                  <div class="range__output">
+                    <div class="range__output-value range__output-value--left">
+                      <input class="range__input range__input--left" type="text" placeholder="30">
+                    </div>
+                    <div class="range__output-value range__output-value--right">
+                      <input class="range__input range__input--right" type="text" placeholder="100">
+                    </div>
+                  </div>
+                  <div class="range__controls">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
+                      <div class="range__toggle range__toggle--min"></div>
+                      <div class="range__toggle range__toggle--max"></div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
             </li>
           </ul>
-
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="button user-list__login button__login" href="login.html">
-                Авторизация
+          <button type="submit" class="search-mate__btn inner-btn btn">
+            Показать
+          </button>
+        </form>
+      </section>
+      <section class="users">
+        <h2 class="visually-hidden">
+          Доступные для выбора попутчики
+        </h2>
+        <ul class="users__list">
+          <li class="users__item">
+            <a href="users?id=123.php" class="users__photo-link">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg">
+                <img class="users__photo" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото Тани Фирсовой">
+              </picture>
+            </a>
+            <a href="users?id=123.php" class="users__title">
+              Таня Фирсова
+            </a>
+            <p class="users__subscribers">
+              1,5 М
+            </p>
+            <ul class="users__hashtags hashtags">
+              <li class="hashtags__item hashtags__item--users">
+                #ЗОЖ
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #ПП
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #Фитнес
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #пляж
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #авокадо
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #смузи
+              </li>
+            </ul>
+            <div class="users__wrap users__wrap--countries">
+              <p class="users__text users__text--countries">
+                хочет посетить:
+              </p>
+              <ul class="users__countries countries">
+                <li class="countries__item countries__item--srilanka">
+                  Шри ланка
+                </li>
+                <li class="countries__item countries__item--thai">
+                  Тайланд
+                </li>
+                <li class="countries__item countries__item--seyshelles">
+                  Сейшеллы
+                </li>
+              </ul>
+            </div>
+            <div class="users__box">
+              <div class="users__wrap">
+                <p class="users__text">
+                  транспорт:
+                </p>
+                <ul class="users__transport transport">
+                  <li class="transport__item transport__item--users transport__item--active">
+                    <img class="transport__image transport__image--plane" src="img/icons/plane.svg" width="16" height="16" alt="Вид транспорта - самолет">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--bus" src="img/icons/bus.svg" width="16" height="16" alt="Вид транспорта - автобус">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--bicycle" src="img/icons/bike.svg" width="16" height="16" alt="Вид транспорта - велосипед">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--walk" src="img/icons/run.svg" width="16" height="16" alt="Вид транспорта - пешие прогулки">
+                  </li>
+                </ul>
+              </div>
+              <div class="users__wrap">
+                <p class="users__text">
+                  левел:
+                </p>
+                <div class="users__level">
+                  <svg class="level__progress" width="60" height="60" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="57" fill="none" stroke="#ff8d30" stroke-width="6"></circle>
+                  </svg>
+                  <p class="level__value">
+                    99
+                  </p>
+                  <span class="level__text">
+                  level
+                </span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="users__btn inner-btn btn">
+              Позвать!
+            </a>
+          </li>
+          <li class="users__item">
+            <a href="users?id=123.php" class="users__photo-link">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
+                <img class="users__photo" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото Пети Демина">
+              </picture>
+            </a>
+            <a href="users?id=123.php" class="users__title">
+              Петя Демин
+            </a>
+            <p class="users__subscribers">
+              150
+            </p>
+            <ul class="users__hashtags hashtags">
+              <li class="hashtags__item hashtags__item--users">
+                #бургер
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #бар
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #футбол
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #концерт
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #крафт
+              </li>
+            </ul>
+            <div class="users__wrap users__wrap--countries">
+              <p class="users__text users__text--countries">
+                хочет посетить:
+              </p>
+              <ul class="users__countries countries">
+                <li class="countries__item countries__item--belgium">
+                  Бельгия
+                </li>
+                <li class="countries__item countries__item--czech">
+                  Чехия
+                </li>
+              </ul>
+            </div>
+            <div class="users__box">
+              <div class="users__wrap">
+                <p class="users__text">
+                  транспорт:
+                </p>
+                <ul class="users__transport transport">
+                  <li class="transport__item transport__item--users transport__item--active">
+                    <img class="transport__image transport__image--plane" src="img/icons/plane.svg" width="16" height="16" alt="Вид транспорта - самолет">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--bus" src="img/icons/bus.svg" width="16" height="16" alt="Вид транспорта - автобус">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--bicycle" src="img/icons/bike.svg" width="16" height="16" alt="Вид транспорта - велосипед">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--walk" src="img/icons/run.svg" width="16" height="16" alt="Вид транспорта - пешие прогулки">
+                  </li>
+                </ul>
+              </div>
+              <div class="users__wrap">
+                <p class="users__text">
+                  левел:
+                </p>
+                <div class="users__level">
+                  <svg class="level__progress" width="60" height="60" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="57" fill="none" stroke="#ff8d30" stroke-width="6"></circle>
+                  </svg>
+                  <p class="level__value">
+                    80
+                  </p>
+                  <span class="level__text">
+                  level
+                </span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="users__btn inner-btn btn">
+              Позвать!
+            </a>
+          </li>
+          <li class="users__item">
+            <a href="users?id=123.php" class="users__photo-link">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg">
+                <img class="users__photo" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фото Марк Смолова">
+              </picture>
+            </a>
+            <a href="users?id=123.php" class="users__title">
+              Марк Смолов
+            </a>
+            <p class="users__subscribers">
+              1700
+            </p>
+            <ul class="users__hashtags hashtags">
+              <li class="hashtags__item hashtags__item--users">
+                #рэп
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #тату
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #хайпбист
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #кроссовки
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #суприм
+              </li>
+            </ul>
+            <div class="users__wrap users__wrap--countries">
+              <p class="users__text users__text--countries">
+                хочет посетить:
+              </p>
+              <ul class="users__countries countries">
+                <li class="countries__item countries__item--usa">
+                  США
+                </li>
+                <li class="countries__item countries__item--aus">
+                  Австралия
+                </li>
+                <li class="countries__item countries__item--dominica">
+                  Доминикана
+                </li>
+              </ul>
+            </div>
+            <div class="users__box">
+              <div class="users__wrap">
+                <p class="users__text">
+                  транспорт:
+                </p>
+                <ul class="users__transport transport">
+                  <li class="transport__item transport__item--users transport__item--active">
+                    <img class="transport__image transport__image--plane" src="img/icons/plane.svg" width="16" height="16" alt="Вид транспорта - самолет">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--bus" src="img/icons/bus.svg" width="16" height="16" alt="Вид транспорта - автобус">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--bicycle" src="img/icons/bike.svg" width="16" height="16" alt="Вид транспорта - велосипед">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--walk" src="img/icons/run.svg" width="16" height="16" alt="Вид транспорта - пешие прогулки">
+                  </li>
+                </ul>
+              </div>
+              <div class="users__wrap">
+                <p class="users__text">
+                  левел:
+                </p>
+                <div class="users__level">
+                  <svg class="level__progress" width="60" height="60" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="57" fill="none" stroke="#ff8d30" stroke-width="6"></circle>
+                  </svg>
+                  <p class="level__value">
+                    25
+                  </p>
+                  <span class="level__text">
+                  level
+                </span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="users__btn inner-btn btn">
+              Позвать!
+            </a>
+          </li>
+          <li class="users__item">
+            <a href="users?id=123.php" class="users__photo-link">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg">
+                <img class="users__photo" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото Ларисы Роговой">
+              </picture>
+            </a>
+            <a href="users?id=123.php" class="users__title">
+              Лариса Роговая
+            </a>
+            <p class="users__subscribers">
+              27
+            </p>
+            <ul class="users__hashtags hashtags">
+              <li class="hashtags__item hashtags__item--users">
+                #образование
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #карьера
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #учеба
+              </li>
+              <li class="hashtags__item hashtags__item--users">
+                #линкедин
+              </li>
+            </ul>
+            <div class="users__wrap users__wrap--countries">
+              <p class="users__text users__text--countries">
+                хочет посетить:
+              </p>
+              <ul class="users__countries countries">
+                <li class="countries__item countries__item--uk">
+                  Великобритания
+                </li>
+                <li class="countries__item countries__item--germ">
+                  Германия
+                </li>
+              </ul>
+            </div>
+            <div class="users__box">
+              <div class="users__wrap">
+                <p class="users__text">
+                  транспорт:
+                </p>
+                <ul class="users__transport transport">
+                  <li class="transport__item transport__item--users transport__item--active">
+                    <img class="transport__image transport__image--plane" src="img/icons/plane.svg" width="16" height="16" alt="Вид транспорта - самолет">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--bus" src="img/icons/bus.svg" width="16" height="16" alt="Вид транспорта - автобус">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--bicycle" src="img/icons/bike.svg" width="16" height="16" alt="Вид транспорта - велосипед">
+                  </li>
+                  <li class="transport__item transport__item--users">
+                    <img class="transport__image transport__image--walk" src="img/icons/run.svg" width="16" height="16" alt="Вид транспорта - пешие прогулки">
+                  </li>
+                </ul>
+              </div>
+              <div class="users__wrap">
+                <p class="users__text">
+                  левел:
+                </p>
+                <div class="users__level">
+                  <svg class="level__progress" width="60" height="60" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="57" fill="none" stroke="#ff8d30" stroke-width="6"></circle>
+                  </svg>
+                  <p class="level__value">
+                    50
+                  </p>
+                  <span class="level__text">
+                  level
+                </span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="users__btn inner-btn btn">
+              Позвать!
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="users__btn-view-all">
+          Показать еще
+        </a>
+        <div class="users__pagination pagination">
+          <ul class="pagination__list pagination__list--numbers">
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--active" href="#">
+                1
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                2
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                3
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                4
               </a>
             </li>
           </ul>
-
-          <ul class="main-nav__contacts contacts">
-            <li class="contacts__item">
-              <a href="tel:88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contacts__item">
-              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-
-          <ul class="main-nav__social social">
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/">
-                Мы в Фейсбуке
+          <ul class="pagination__list pagination-arrows__list">
+            <li class="pagination-arrows__item">
+              <a href="#" class="pagination-arrows__link pagination-arrows__link--prev" aria-label="Предыдущая страница">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg width="10" height="22" class="pagination-arrows__link-image" fill="#192144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" style="enable-background: new 0 0 10 14;" xml:space="preserve">
+                <polygon points="0,7.1 10,0.1 10,14 "/>
+              </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/">
-                Мы в Вконтакте
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/">
-                Мы в Инстаграме
+            <li class="pagination-arrows__item">
+              <a href="#" class="pagination-arrows__link pagination-arrows__link--next" aria-label="Следующая страница">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg width="10" height="22" class="pagination-arrows__link-image" fill="#192144" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" style="enable-background: new 0 0 10 14;" xml:space="preserve">
+                <polygon points="0,14 0,0.1 10,7.1 "/>
+              </svg>
               </a>
             </li>
           </ul>
         </div>
-      </nav>
-      <a class="header__current-section">Направления</a>
-    </header>
-
-    <main class="main">
-      <h1 class="visually-hidden">Фильтрация по странам</h1>
-      <section class="filters">
-        <h2 class="visually-hidden">Фильтр попутчиков</h2>
       </section>
-
-      <section class="companion">
-        <h2 class="visually-hidden">Результаты поиска</h2>
-        <article class="found-companion">
-          <header>
-            <div class="found-companion__photo-wrap">
-              <a class="found-companion__photo-wrap-link" href="about.html">
-                <img src="http://placehold.it/70x70" class="found-companion__photo" width="70px" height="70px"/>
-              </a>
-            </div>
-            <a class="found-companion__photo-wrap-link" href="about.html">
-              <h3 class="found-companion__name">Таня Фирсова</h3>
-            </a>
-            <button class="found-companion__like found-companion__like--liked"></button>
-            <span class="found-companion__likes">1,5м</span>
-            <div class="found-companion__status found-companion__status--offline"></div>
-            <ul class="found-companion__tags-list">
-              <li class="found-companion__tags-item">#ЗОЖ</li>
-              <li class="found-companion__tags-item">#ПП</li>
-              <li class="found-companion__tags-item">#Фитнес</li>
-              <li class="found-companion__tags-item">#пляж</li>
-              <li class="found-companion__tags-item">#авокадо</li>
-              <li class="found-companion__tags-item">#смузи</li>
-            </ul>
-          </header>
-          <div class="found-companion__countries-section found-companion-countries">
-            <h4 class="found-companion-countries__description">
-              хочет посетить:
-            </h4>
-            <ul class="found-companion-countries__list">
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">Шри Ланка</span>
-              </li>
-
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">Тайланд</span>
-              </li>
-
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">Сейшелы</span>
-              </li>
-            </ul>
-          </div>
-          <div class="found-companion__transport">
-            <h4 class="found-companion__transport-description">
-              транспорт:
-            </h4>
-            <ul class="found-companion__transport-list">
-              <li class="found-companion__transport-item found-companion__transport-item--plane found-companion__transport-item--selected"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--bus"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--bike"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--hike"></li>
-            </ul>
-          </div>
-          <div class="found-companion__level">
-            <span class="found-companion__level-number">99</span>
-            level
-          </div>
-          <a href="#" class="button found-companion__button">Позвать!</a>
-        </article>
-
-        <article class="found-companion">
-          <div class="found-companion__photo-wrap">
-            <a class="found-companion__photo-wrap-link" href="about.html">
-              <img src="http://placehold.it/70x70" class="found-companion__photo" width="70px" height="70px"/>
-            </a>
-          </div>
-          <a class="found-companion__photo-wrap-link" href="about.html">
-            <h3 class="found-companion__name">Петя Демин</h3>
-          </a>
-          <div class="found-companion__like"></div>
-          <span class="found-companion__likes">150</span>
-          <button class="found-companion__status found-companion__status--offline"></button>
-          <ul class="found-companion__tags-list">
-            <li class="found-companion__tags-item">#бургер</li>
-            <li class="found-companion__tags-item">#бар</li>
-            <li class="found-companion__tags-item">#футбол</li>
-            <li class="found-companion__tags-item">#концерт</li>
-            <li class="found-companion__tags-item">#крафт</li>
-          </ul>
-          <div class="found-companion__countries-section found-companion-countries">
-            <h4 class="found-companion-countries__description">
-              хочет посетить:
-            </h4>
-            <ul class="found-companion-countries__list">
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">Бельгия</span>
-              </li>
-
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">Чехия</span>
-              </li>
-            </ul>
-          </div>
-          <div class="found-companion__transport-section found-companion-transport">
-            <h4 class="found-companion-transport__description">
-              транспорт:
-            </h4>
-            <ul class="found-companion__transport-list">
-              <li class="found-companion__transport-item found-companion__transport-item--plane found-companion__transport-item--selected"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--bus found-companion__transport-item--selected"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--bike"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--hike found-companion__transport-item--selected"></li>
-            </ul>
-          </div>
-          <div class="found-companion__level">
-            <span class="found-companion__level-number">80</span>
-            level
-          </div>
-          <a href="#" class="button found-companion__button">Позвать!</a>
-        </article>
-
-        <article class="found-companion">
-          <div class="found-companion__photo-wrap">
-            <a class="found-companion__photo-wrap-link" href="about.html">
-              <img src="http://placehold.it/70x70" class="found-companion__photo" width="70px" height="70px"/>
-            </a>
-          </div>
-          <a class="found-companion__photo-wrap-link" href="about.html">
-            <h3 class="found-companion__name">Марк Смолов</h3>
-          </a>
-          <div class="found-companion__like"></div>
-          <span class="found-companion__likes">1700</span>
-          <button class="found-companion__status found-companion__status--offline"></button>
-          <ul class="found-companion__tags-list">
-            <li class="found-companion__tags-item">#рэп</li>
-            <li class="found-companion__tags-item">#тату</li>
-            <li class="found-companion__tags-item">#хайпбист</li>
-            <li class="found-companion__tags-item">#кроссовки</li>
-            <li class="found-companion__tags-item">#суприм</li>
-          </ul>
-          <div class="found-companion__countries-section found-companion-countries">
-            <h4 class="found-companion-countries__description">
-              хочет посетить:
-            </h4>
-            <ul class="found-companion-countries__list">
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">США</span>
-              </li>
-
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">Австралия</span>
-              </li>
-
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">Доминикана</span>
-              </li>
-            </ul>
-          </div>
-          <div class="found-companion__transport-section found-companion-transport">
-            <h4 class="found-companion-transport__description">
-              транспорт:
-            </h4>
-            <ul class="found-companion__transport-list">
-              <li class="found-companion__transport-item found-companion__transport-item--plane found-companion__transport-item--selected"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--bus"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--bike found-companion__transport-item--selected"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--hike"></li>
-            </ul>
-          </div>
-          <div class="found-companion__level">
-            <span class="found-companion__level-number">25</span>
-            level
-          </div>
-          <a href="#" class="button found-companion__button">Позвать!</a>
-        </article>
-
-        <article class="found-companion">
-          <div class="found-companion__photo-wrap">
-            <a class="found-companion__photo-wrap-link" href="about.html">
-              <img src="http://placehold.it/70x70" class="found-companion__photo" width="70px" height="70px"/>
-            </a>
-          </div>
-          <a class="found-companion__photo-wrap-link" href="about.html">
-            <h3 class="found-companion__name">Лариса Роговая</h3>
-          </a>
-          <div class="found-companion__like"></div>
-          <span class="found-companion__likes">23</span>
-          <button class="found-companion__status found-companion__status--online"></button>
-          <ul class="found-companion__tags-list">
-            <li class="found-companion__tags-item">#образование</li>
-            <li class="found-companion__tags-item">#карьера</li>
-            <li class="found-companion__tags-item">#учеба</li>
-            <li class="found-companion__tags-item">#линкедин</li>
-          </ul>
-          <div class="found-companion__countries-section found-companion-countries">
-            <h4 class="found-companion-countries__description">
-              хочет посетить:
-            </h4>
-            <ul class="found-companion-countries__list">
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">Великобритания</span>
-              </li>
-
-              <li class="found-companion-countries__item">
-                <img src="http://placehold.it/26x18" class="found-companion-countries__flag" width="26px" height="18px"/>
-                <span class="found-companion-countries__name">Германия</span>
-              </li>
-            </ul>
-          </div>
-          <div class="found-companion__transport-section found-companion-transport">
-            <h4 class="found-companion-transport__description">
-              транспорт:
-            </h4>
-            <ul class="found-companion__transport-list">
-              <li class="found-companion__transport-item found-companion__transport-item--plane found-companion__transport-item--selected"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--bus found-companion__transport-item--selected"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--bike"></li>
-              <li class="found-companion__transport-item found-companion__transport-item--hike"></li>
-            </ul>
-          </div>
-          <div class="found-companion__level">
-            <span class="found-companion__level-number">50</span>
-            level
-          </div>
-          <a href="#" class="button found-companion__button">Позвать!</a>
-        </article>
-
-        <button type="button" class="button found-companions__button-more">
-          Показать еще
-        </button>
-        <ul class="companions-navigation">
-          <li class="companions-navigation__item">
-            <a class="companions-navigation__link companions-navigation__link--prev" href="#">
-              Назад
-            </a>
-          </li>
-          <li class="companions-navigation__item">
-            <a class="companions-navigation__link companions-navigation__link--next" href="#">
-              Вперед
-            </a>
-          </li>
-        </ul>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <a href="index.html" class="footer__logo">
-        <img src="http://placehold.it/96x15" width="96px" height="15px" />
-      </a>
-      <ul class="footer__social social">
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/">
-            Мы в Фейсбуке
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/">
-            Мы в Вконтакте
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/">
-            Мы в Инстаграме
-          </a>
-        </li>
-      </ul>
-      <div class="footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer__container container">
+    <h2 class="visually-hidden">
+      Правовая информация
+    </h2>
+    <a class="footer__logo">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
+        <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип приложения Погнали?">
+      </picture>
+    </a>
+    <ul class="footer__social social social--footer">
+      <li class="social__item">
+        <a href="#" class="social__link social__link--footer" aria-label="Ссылка на Фейсбук приложения Погнали?">
+          <?xml version="1.0" encoding="utf-8"?>
+          <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+          <svg class="social__link-icon social__link-icon--facebook" fill="#1d2e5b" width="11" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21" style="enable-background: new 0 0 11 21;" xml:space="preserve">
+              <g>
+                <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
+                  V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
+                  C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z"/>
+              </g>
+            </svg>
         </a>
-      </div>
-    </footer>
-  </body>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link social__link--footer social__link--footer-vk" aria-label="Ссылка на Вконтакте приложения Погнали?">
+          <?xml version="1.0" encoding="utf-8"?>
+          <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+          <svg class="social__link-icon social__link-icon--vk" fill="#1d2e5b" width="30" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8" style="enable-background: new 0 0 30 15.8;" xml:space="preserve">
+              <g>
+                <path d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6
+                  c0,0.1,0,0.8-0.5,1.2c-0.4,0.4-1.1,0.5-1.2,0.5l-1.9,0c-1,0-4.4-0.2-7.4-3c-3.7-3.4-6.8-9.8-7-10.1C0,2.2-0.1,1.5,0.3,1.1
+                  c0.4-0.4,1.1-0.5,1.4-0.5l4.1,0l0.1,0c0.1,0,0.6,0.1,1,0.3c0.4,0.2,0.6,0.7,0.6,0.7c0,0,0.6,1.4,1.5,2.7c1.3,2,1.9,2.5,2.1,2.6
+                  c0.2-0.4,0.3-1.7,0.2-2.9c0-0.5-0.1-1.1-0.3-1.3c-0.1-0.1-0.4-0.3-0.8-0.3L9.5,1.8c-0.1-0.7,0.6-1.2,1.1-1.4
+                  C11.3,0.1,12.4,0,13.7,0l0.7,0c1.2,0,1.6,0.1,2.1,0.2c1.7,0.4,1.6,1.7,1.6,3.3c0,0.5,0,1,0,1.6c0,0.2,0,0.3,0,0.5
+                  c0,0.4,0,1,0.1,1.3c0.2-0.1,0.9-0.7,2.1-2.5c0.8-1.2,1.4-2.5,1.5-2.8l0,0c0.2-0.4,0.6-0.9,1.6-0.9l4.3,0c0,0,0.2,0,0.4,0
+                  c1,0,1.6,0.3,1.8,0.9c0.3,0.6,0.2,1.7-2.4,4.6c-0.4,0.4-0.7,0.8-1,1.1c-0.6,0.7-1.2,1.4-1.2,1.6C25.4,9,26,9.5,26.6,10
+                  c1.5,1.2,2.5,2.3,3,3.1c0.5,0.8,0.4,1.3,0.3,1.7c-0.4,0.9-1.6,1-1.9,1l-3.8,0C24.1,15.8,24.1,15.8,23.9,15.8z M18.6,10.9
+                  c0.9,0,1.7,0.8,2.5,1.6c0.5,0.5,1,1,1.5,1.3c0.7,0.4,1.3,0.4,1.4,0.4l0.1,0l3.8,0c0.2,0,0.4-0.1,0.5-0.1c0,0,0-0.1-0.1-0.2
+                  c-0.4-0.7-1.4-1.7-2.7-2.7c-1.2-1-1.8-1.5-1.9-2.2c-0.1-0.8,0.5-1.4,1.6-2.7c0.3-0.3,0.6-0.7,1-1.1c1.6-1.8,2-2.6,2.1-3
+                  c-0.2,0-0.6,0-0.7,0l-4.4,0c-0.2,0-0.2,0-0.2,0c-0.2,0.4-0.8,1.8-1.6,3c-1.9,2.8-2.8,3.2-3.4,3.2c-0.2,0-0.4,0-0.6-0.1
+                  c-1-0.6-1-1.8-0.9-2.8c0-0.1,0-0.3,0-0.4c0-0.6,0-1.2,0-1.7c0.1-1.7,0-1.7-0.4-1.8c-0.4-0.1-0.7-0.1-1.9-0.2l-0.7,0
+                  c-0.6,0-1.3,0-1.9,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.6,0.7,0.6,2,0.6,2.2c0.1,1.6,0.1,3.8-1,4.3c-0.2,0.1-0.4,0.1-0.6,0.1
+                  c-0.9,0-1.9-0.9-3.4-3.3C6.8,3.9,6.1,2.4,6.1,2.3c0,0-0.1-0.1-0.1-0.1C5.9,2.2,5.8,2.1,5.7,2.1l-4,0c0,0,0,0-0.1,0
+                  C2.2,3.3,5,8.7,8.1,11.6c2.7,2.5,5.8,2.6,6.4,2.6l1.9,0c0,0,0.2-0.1,0.3-0.1c0,0,0-0.1,0-0.1c0-0.3,0-2.6,1.6-3
+                  C18.4,10.9,18.5,10.9,18.6,10.9z"/>
+              </g>
+            </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link social__link--footer" aria-label="Ссылка на Инстаграмм приложения Погнали?">
+          <?xml version="1.0" encoding="utf-8"?>
+          <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+          <svg class="social__link-icon social__link-icon--instagram" fill="#1d2e5b" width="23" height="23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23 23" style="enable-background: new 0 0 23 23;" xml:space="preserve">
+              <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
+                M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z"/>
+            <path class="st0" d="M11.5,7.1c2.4,0,4.4,2,4.4,4.4c0,2.4-2,4.4-4.4,4.4c-2.4,0-4.4-2-4.4-4.4C7.1,9.1,9.1,7.1,11.5,7.1 M11.5,5.6
+                c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S14.8,5.6,11.5,5.6L11.5,5.6z"/>
+            <circle class="st0" cx="17.6" cy="5.4" r="1.3"/>
+            </svg>
+        </a>
+      </li>
+    </ul>
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright copyright" target="_blank">
+        <span class="copyright__text">
+          Разработано
+        </span>
+      <img class="copyright__logo" src="img/icons/htmlacademy.svg" width="16" height="16" alt="Логотип HTML Academy">
+    </a>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
 </html>
