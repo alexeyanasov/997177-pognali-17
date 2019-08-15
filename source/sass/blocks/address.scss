@@ -7,6 +7,12 @@
   background-color: $color-yellow;
 }
 
+.address__wrap{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+}
+
 .address__list {
   @include list-none();
   margin-bottom: 32px;
