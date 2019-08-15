@@ -19,6 +19,7 @@ body {
   background-color: $bg-whisper-color;
   color: $text-dark-grey;
   letter-spacing: 0;
+  counter-reset: section;
 }
 
 img {

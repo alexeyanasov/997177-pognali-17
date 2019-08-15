@@ -9,6 +9,7 @@
 
 .contacts__item {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
 }
@@ -75,8 +76,9 @@
     align-items: center;
   }
 
-  .contacts__item:first-child {
+  .contacts__item {
     margin-right: 111px;
+    margin-bottom: 10px;
   }
 
   .contacts__icon {

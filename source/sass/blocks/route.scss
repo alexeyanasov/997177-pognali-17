@@ -98,6 +98,9 @@
   text-transform: uppercase;
   letter-spacing: 0.01em;
   transition: color 0.3s;
+  width: 130px;
+  white-space: nowrap;
+  text-overflow: clip;
 }
 
 .route__btn {
