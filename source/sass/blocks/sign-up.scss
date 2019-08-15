@@ -113,7 +113,7 @@
 
   .sign-up__text {
     @include text-size-tablet;
-    max-width: none;
+    max-width: 606px;
 
     &:last-of-type {
       margin-bottom: 58px;
