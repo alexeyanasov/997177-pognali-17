@@ -19,13 +19,8 @@ const desktopWidth = 1024;
 header.classList.remove('header--nojs')
 
 navToggle.addEventListener('click', function() {
-  if (header.classList.contains('header--closed')) {
-    header.classList.remove('header--closed');
-    header.classList.add('header--opened');
-  } else {
-    header.classList.add('header--closed');
-    header.classList.remove('header--opened');
-  }
+  header.classList.toggle('header--closed');
+  header.classList.toggle('header--opened');
 });
 
 if (popupBtn) {
@@ -34,29 +29,6 @@ if (popupBtn) {
     popup.classList.add('popup-show');
   });
 }
-
-// //Переписывание ячеек таблицы
-// calendar = {
-//   1: '1',
-//   2: '2',
-//   3: '4'
-// };
-//
-// function makeCell(num) {
-//   let li = document.createElement('li');
-//   li.classList.add('calendar-cell');
-//   li.textContent = num;
-//   return li;
-// }
-//
-// let calendarList = document.createElement('ul');
-//
-// for (key in calendar) {
-//   calendarList.appendChild(makeCell(calendar[key]));
-// }
-//
-// let months = document.querySelector('.calendar__months-list');
-// months.insertAdjacentElement('afterend', calendarList);
 
 
 if (closeBtn) {
@@ -111,12 +83,14 @@ if (filterFormItems) {
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popup.classList.contains('popup-show')) {
-      popup.classList.remove('popup-show');
-    }
+    // if (popup.classList.contains('popup-show')) {
+    //   popup.classList.remove('popup-show');
+    // }
+    popup.classList.toggle('popup-show');
 
-    if (filter.classList.contains('country-filters--expand')) {
-      filter.classList.remove('country-filters--expand');
-    }
+    // if (filter.classList.contains('country-filters--expand')) {
+    //   filter.classList.remove('country-filters--expand');
+    // }
+    popup.classList.toggle('country-filters--expand');
   }
 });

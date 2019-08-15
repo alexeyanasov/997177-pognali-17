@@ -22,13 +22,14 @@
   margin-right: 17px;
   border-radius: 50%;
   background-color: $bg-icon;
+}
 
-  &-image--phone {
+.contacts__icon-image{
+  &--phone {
     width: 20px;
     height: 18px;
   }
-
-  &-image--email {
+  &--email {
     width: 18px;
     height: 13px;
   }
