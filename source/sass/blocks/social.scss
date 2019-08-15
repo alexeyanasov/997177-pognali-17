@@ -20,7 +20,7 @@
 
   &:hover,
   &:focus {
-    background-color: $bg-blue-color;
+    border: 1px solid $bg-blue-color;
   }
 
   &:hover .social__link-icon,
@@ -38,7 +38,7 @@
   }
 
   &--facebook {
-    background-image: url("../../img/facebook.svg");
+    background-image: url("../../img/icons/facebook.svg");
     background-position: center;
     background-size: 11px 21px;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@
   }
 
   &--vk {
-    background-image: url("../../img/vk.svg");
+    background-image: url("../../img/icons/vk.svg");
     background-position: center;
     background-size: 23px 12px;
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@
   }
 
   &--instagram {
-    background-image: url("../../img/instagram.svg");
+    background-image: url("../../img/icons/instagram.svg");
     background-position: center;
     background-size: 18px 18px;
     background-repeat: no-repeat;
