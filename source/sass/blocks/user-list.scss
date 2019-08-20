@@ -1,37 +1,105 @@
 .user-list {
   @include list-none;
   width: 100%;
+  margin-bottom: 50px;
   text-align: center;
 
-
-  &--top-menu {
-    margin-bottom: 50px;
+  &--offer {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    margin-bottom: 0;
   }
 }
 
 .user-list__link {
-  color: $dark-blue;
-  font-size: 17px;
-  line-height: 30px;
-  text-transform: uppercase;
-  background-color: $color-yellow;
-  transition: background-color 0.3s, color 0.3s;
+  @include btn-default;
+
+  &--auth {
+    display: block;
+    padding: 10px 0;
+    color: $dark-blue;
+    font-size: 17px;
+    line-height: 30px;
+    border-radius: 50px;
+    background-color: $color-yellow;
+
+    &:hover,
+    &:focus {
+      background-color: $color-dark-yellow;
+    }
+
+    &:active {
+      color: rgba($dark-blue, 0.3);
+    }
+  }
+}
+
+.user-list--offer .user-list__link--auth {
+  padding: 5px 0;
+}
+
+.user-list--offer .user-list__item:last-child {
+  flex-grow: 1;
+}
+
+.user-list__link--icon {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+
+  &:active .user-list__link-image {
+    opacity: 0.3;
+  }
+}
+
+.user-list--offer .user-list__link--icon {
+  display: flex;
+}
+
+.user-list__link--phone {
+  background-color: $color-orange;
 
   &:hover,
   &:focus {
-    background-color: $color-dark-yellow;
+    background-color: $color-dark-orange;
+  }
+}
+
+.user-list__link--mail {
+  background-color: $color-dark-yellow;
+
+  &:hover,
+  &:focus {
+    background-color: $color-orange;
+  }
+}
+
+@include respond-above($tablet) {
+  .user-list {
+    margin-bottom: 0;
+
+    &--offer {
+      display: none;
+    }
   }
 
-  &:active {
-    color: rgba($dark-blue, 0.3);
+  .user-list__link--auth {
+    padding: 10px 30px;
+    font-size: 20px;
+    line-height: 30px;
   }
+}
 
-  &::after {
-    display: none;
-  }
-
-  &--top-menu {
-    max-width: 200px;
-    padding: 7px 21px 5px;
+@include respond-above($desktop) {
+  .user-list__link--icon {
+    display: flex;
+    width: 50px;
+    height: 50px;
   }
 }
