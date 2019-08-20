@@ -22,9 +22,18 @@
   font-weight: 300;
 }
 
+.directions__wrap {
+  position: relative;
+  padding-bottom: 70px;
+}
+
 .directions__btn {
+  position: absolute;
   display: block;
   padding: 24px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 @include respond-above($tablet) {
@@ -100,5 +109,6 @@
     right: 294px;
     width: 274px;
     margin: 0;
+    position: relative;
   }
 }
