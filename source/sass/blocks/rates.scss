@@ -1,9 +1,28 @@
 .rates {
   @include section-border-radius;
   position: relative;
-  z-index: 3;
-  padding: 77px 0 35px;
+  z-index: 5;
+  padding: 47px 0 35px;
   background-color: $bg-whisper-color;
+}
+
+.rates__container {
+  position: relative;
+  z-index: 5;
+  padding-left: 49px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -11px;
+    right: 0;
+    width: 99px;
+    height: 99px;
+    background: url("../img/rates@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 99px 99px;
+  }
 }
 
 .rates__title {
@@ -19,24 +38,51 @@
   padding-right: 45px;
 }
 
-.rates__item {
-  padding: 11px 0;
-  font-weight: 300;
-  border-bottom: 1px solid $border-ghost-color;
+.rates__desc {
+  position: relative;
+  margin: 0;
 
-  &:first-child {
-    border-top: 1px solid $border-ghost-color;
+  &::after {
+    content: attr(data-order);
+    position: absolute;
+    top: 0;
+    right: -44px;
+    width: 34px;
+    height: 34px;
+    color: $white;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $color-yellow;
   }
 }
 
-.rates__desc {
-  margin: 0;
+.rates__item {
+  padding: 11px 0;
+  font-weight: 300;
+  border-bottom: 1px solid rgba($text-dark-grey, 0.05);
+
+  &:first-child {
+    border-top: 1px solid rgba($text-dark-grey, 0.05);
+
+    .rates__desc::after {
+      top: -10px;
+      background-color: $color-light-orange;
+    }
+  }
+
+  &:nth-child(2) .rates__desc::after {
+    top: -10px;
+    background-color: $color-dark-yellow;
+  }
 }
+
 
 .rates__btn {
   color: $bg-blue-color;
   font-size: 16px;
   line-height: 16px;
+  text-decoration: none;
   transition: color 0.3s;
 
   &:hover,
@@ -53,8 +99,14 @@
   .rates {
     @include section-border-radius-tablet;
     padding-top: 100px;
-    padding-bottom: 64px;
+    padding-bottom: 79px;
     padding-left: 0;
+  }
+
+  .rates__container::after {
+    top: auto;
+    bottom: -41px;
+    right: 44px;
   }
 
   .rates__title {
@@ -65,8 +117,22 @@
   }
 
   .rates__list {
+    position: relative;
+    margin-bottom: 53px;
     padding-left: 90px;
-    padding-right: 35px;
+    padding-right: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: -40px;
+      top: -43px;
+      width: 198px;
+      height: 285px;
+      border-radius: 20px;
+      background-color: $bg-snuff-color;
+    }
   }
 
   .rates__btn {
@@ -76,13 +142,38 @@
     font-size: 20px;
     line-height: 20px;
 
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 50%;
+      width: 67px;
+      height: 67px;
+      border-radius: 50%;
+      background-color: $bg-snuff-color;
+      background-image: url("../img/icons/business.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 17px 21px;
+      transform: translateY(50%);
+      transition: opacity 0.3s;
+    }
+
     &:hover,
     &:focus {
       color: rgba($text-light-blue, 0.7);
+
+      &::before {
+        opacity: 0.7;
+      }
     }
 
     &:active {
       color: rgba($text-light-blue, 0.3);
+
+      &::before {
+        opacity: 0.3;
+      }
     }
   }
 
@@ -92,6 +183,15 @@
     justify-content: space-between;
     padding: 16px 0;
   }
+
+  .rates__desc::after {
+    right: auto;
+    left: -90px;
+    top: -10px;
+    width: 67px;
+    height: 67px;
+    line-height: 67px;
+  }
 }
 
 @include respond-above($desktop) {
@@ -99,17 +199,38 @@
     padding: 180px 0;
   }
 
+  .rates__container {
+    &::after {
+      bottom: 80px;
+      right: 133px;
+      width: 198px;
+      height: 198px;
+      background-size: 198px 198px;
+    }
+  }
+
   .rates__title {
     margin-bottom: 125px;
   }
 
   .rates__list {
+    width: 973px;
     margin-bottom: 54px;
     padding-left: 161px;
-    padding-right: 345px;
+
+    &::after {
+      top: -50px;
+      right: -160px;
+      width: 444px;
+      height: 300px;
+    }
   }
 
   .rates__btn {
     padding-left: 161px;
+
+    &::before {
+      left: 69px;
+    }
   }
 }
