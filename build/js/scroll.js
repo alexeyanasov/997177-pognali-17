@@ -1,0 +1,1 @@
+var nav=document.querySelector("#nav"),topOfNav=nav.offsetTop,navy=document.querySelector(".header");function fixNav(){window.scrollY>=topOfNav?navy.classList.add("fixed-nav"):navy.classList.remove("fixed-nav")}window.addEventListener("scroll",fixNav);

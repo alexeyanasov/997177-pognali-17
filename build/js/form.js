@@ -1,0 +1,1 @@
+var form=document.querySelector(".help__form"),inp=form.querySelector(".help__form-email"),email=form.querySelector("[name=email]"),err=form.querySelector("[placeholder=E-mail]");form.addEventListener("submit",function(e){email.value||e.preventDefault(),err.placeholder="Введите e-mail",inp.classList.add("help__form-email--err")});

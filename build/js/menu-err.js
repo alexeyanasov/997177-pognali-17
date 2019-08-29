@@ -1,0 +1,1 @@
+var menuErr=document.querySelector(".main-nav"),buttonHidden=menuErr.querySelector(".main-nav__toggle"),jsErr=function(){menuErr.classList.remove("main-nav--err"),buttonHidden.classList.remove("main-nav__toggle--err")};jsErr();
