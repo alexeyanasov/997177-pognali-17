@@ -1,0 +1,162 @@
+.guess {
+  width: 270px;
+  .fonts(18px,18px,700);
+  color: #161c35;
+  background-color: #161c35;
+}
+
+.guess__list {
+  .discard;
+  list-style: none;
+  counter-reset: section;
+}
+
+.guess__item {
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 25px;
+  padding-top: 22px;
+  padding-right: 105px;
+  min-height: 100px;
+  border-radius: 10px;
+}
+
+.guess__item::before {
+  position: absolute;
+  counter-increment: section;
+  content: counter(section);
+  right: 0;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+}
+
+.guess__item:nth-of-type(1) {
+  background-color: #ff8d30;
+}
+
+.guess__item:nth-of-type(2) {
+  margin-top: -20px;
+  background-color: #ffa530;
+}
+
+.guess__item:nth-of-type(3) {
+  margin-top: -20px;
+  background-color: #ffbd30;
+}
+
+.guess__item:nth-of-type(4) {
+  margin-top: -20px;
+  min-height: 80px;
+  background-color: #ffd74b;
+}
+
+@media (min-width: @tablet-width) {
+  .guess {
+    width: 688px;
+    background-color: transparent;
+  }
+
+  .guess__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .guess__list .guess__item {
+    .discard;
+    padding-top: 31px;
+    padding-left: 35px;
+    padding-right: 160px;
+    margin-top: 0;
+    min-height: 140px;
+    .fonts(24px,24px,600);
+  }
+
+  .guess__item:nth-child(1) {
+    width: 383px;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+  }
+
+  .guess__item:nth-child(2) {
+    margin-left: -40px;
+    width: 345px;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .guess__item:nth-child(3) {
+    width: 383px;
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+  }
+
+  .guess__item:nth-child(4) {
+    margin-left: -40px;
+    width: 345px;
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .guess__item::before {
+    .fonts(30px,120px,600);
+    left: 34px;
+    top: 43px;
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .guess__list {
+    .discard;
+    display: flex;
+    width: 1320px;
+  }
+
+  .guess__list .guess__item {
+    .discard;
+    padding-top: 29px;
+    padding-left: 34px;
+    padding-right: 155px;
+    margin-top: 14px;
+    width: 375px;
+    min-height: 107px;
+    border-radius: 20px;
+  }
+
+  .guess__item:nth-child(2) {
+    position: relative;
+    margin-left: -60px;
+    padding-left: 30px;
+  }
+
+  .guess__item:nth-child(3) {
+    position: relative;
+    margin-left: -30px;
+    padding-left: 31px;
+  }
+
+  .guess__item:nth-child(4) {
+    margin-left: -30px;
+    padding-left: 30px;
+    width: 315px;
+  }
+
+  .guess__item::before {
+    .fonts(24px,120px,600);
+    left: 268px;
+    top: -19px;
+    width: 12px;
+    height: 26px;
+    color: #ffffff;
+  }
+
+  .guess__item:nth-child(2)::before,
+  .guess__item:nth-child(3)::before {
+    left: 299px;
+  }
+}

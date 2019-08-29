@@ -1,0 +1,92 @@
+.transport-list {
+  display: flex;
+  width: 132px;
+  list-style: none;
+}
+
+.transport-list__item {
+  width: 32.25px;
+  height: 32.25px;
+  font-size: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.transport-list__kind {
+  &:hover {
+    fill: #b2b2b2;
+  }
+}
+
+.transport-list__item-plane {
+  margin-right: 3px;
+  fill: rgba(16, 29, 65, 0.2);
+}
+
+.transport-list__item-bus {
+  fill: rgba(16, 29, 65, 0.2);
+}
+
+.transport-list__item-bike {
+  fill: rgba(16, 29, 65, 0.2);
+}
+
+.transport-list__item-run {
+  fill: rgba(16, 29, 65, 0.2);
+}
+
+.transport-list__item-plane--active,
+.transport-list__item-bus--active,
+.transport-list__item-bike--active,
+.transport-list__item-run--active {
+  fill: rgba(16, 29, 65, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .transport-list {
+    display: flex;
+    justify-content: space-between;
+    width: 196px;
+  }
+
+  .transport-list__item {
+    width: 43px;
+    height: 43px;
+  }
+
+  .transport-list__item-plane {
+    width: 19px;
+    height: 21px;
+  }
+
+  .transport-list__item-bus {
+    width: 17px;
+    height: 21px;
+  }
+
+  .transport-list__item-bike {
+    width: 24px;
+    height: 21px;
+  }
+
+  .transport-list__item-run {
+    width: 20px;
+    height: 21px;
+  }
+}

@@ -1,0 +1,135 @@
+.destinations {
+  position: relative;
+  z-index: 9;
+  margin-top: -30px;
+  padding-top: 102px;
+  padding-bottom: 30px;
+  background-color: #edeff6;
+  .border-radius(30px);
+}
+
+.destinations__caption {
+  .discard;
+  padding-left: 25px;
+  margin-bottom: 19px;
+  .fonts(24px,24px,700);
+  color: @caption-font-color;
+}
+
+.destinations__advert {
+  .discard;
+  padding-left: 25px;
+  padding-right: 30px;
+  margin-bottom: 60px;
+  .fonts(16px,22px,400);
+}
+
+.destinations__list {
+  .discard;
+  margin-bottom: 26px;
+  list-style: none;
+}
+
+.destinations__list-item {
+  margin-bottom: 10px;
+}
+
+.country-card__image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .destinations {
+    z-index: 8;
+    margin-top: -100px;
+    padding-top: 171px;
+    padding-bottom: 80px;
+    .border-radius(60px);
+
+    /*background-image: url("../img/bright-back.svg"), url("../img/flags-back@1x.png");
+    background-position: 39px 506px, 438px 180px;
+    background-size: 141px 141px, 289px 575px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bright-back.svg"), url("../img/flags-back@2x.png");
+    }*/
+  }
+
+  .destinations__caption {
+    .discard;
+    margin-top: 2px;
+    margin-left: 33px;
+    .fonts(45px,45px,600);
+  }
+
+  .destinations__advert {
+    margin-top: 57px;
+    margin-left: 10px;
+    margin-bottom: 105px;
+    padding-right: 300px;
+    .fonts(28px,33px,400);
+  }
+
+  .destinations__link {
+    margin: 0 auto;
+    padding-left: 30px;
+    width: 618px;
+    height: 81px;
+    .fonts(24px,24px,600);
+    border-radius: 20px;
+  }
+
+  .destinations__list {
+    margin-bottom: 42px;
+  }
+
+  .destinations__list-item {
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .destinations {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 98px;
+
+    background-image: url("../img/bright-back.svg"), url("../img/flags-back@1x.png");
+    background-position: 59px 189px, 1090px 188px;
+    background-size: 141px 141px, 289px 575px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bright-back.svg"), url("../img/flags-back@2x.png");
+    }
+  }
+
+  .destinations__caption {
+    .discard;
+    margin-top: 95px;
+    margin-left: 43px;
+    height: 100px;
+  }
+
+  .destinations__advert {
+    .discard;
+    margin-left: -269px;
+    margin-top: 198px;
+    width: 370px;
+    height: 160px;
+  }
+
+  .destinations__list {
+    order: -1;
+    margin-top: 89px;
+    /*margin-left: -23px;*/
+  }
+
+  .destinations__link {
+    width: 275px;
+    margin-top: -122px;
+    margin-right: 243px;
+  }
+}

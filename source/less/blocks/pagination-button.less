@@ -1,0 +1,44 @@
+.pagination-button {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  .fonts(0,0,0);
+  border: none;
+  background-repeat: no-repeat;
+  background-size: 9px 20px;
+  background-position: 10px 3px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: " ";
+    top: 6px;
+    right: 17px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.pagination-button--left {
+  &::before {
+    border-right: 10px solid @base-color;
+  }
+}
+
+.pagination-button--right {
+  &::before {
+    right: 15px;
+    border-left: 10px solid @base-color;
+  }
+}

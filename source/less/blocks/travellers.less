@@ -1,0 +1,182 @@
+.travellers {
+  position: relative;
+  z-index: 8;
+  margin-top: -30px;
+  padding-bottom: 12px;
+  padding-top: 30px;
+  background-color: #192144;
+  .border-radius(30px);
+  background-image: url("../img/blue-back-mobile.svg"), url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 132px 132px, 143px 143px, 61px 71px;
+  background-position: -19px 69px, 152px 69px, 0 341px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/blue-back-mobile.svg"), url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-mobile@2x.png");
+  }
+}
+
+.travellers__top-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  padding-top: 72px;
+  padding-left: 25px;
+}
+
+.travellers ul {
+  list-style: none;
+}
+
+.travellers__caption {
+  .discard;
+  .fonts(24px,24px,700);
+  color: @caption-font-color;
+}
+
+.travellers__slogan {
+  margin-top: 20px;
+  padding-right: 30px;
+  .fonts(16px,22px,400);
+  color: #ffffff;
+}
+
+.travellers__slogan br {
+  display: none;
+}
+
+.travellers__text {
+  .discard;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  .fonts(16px,22px,700);
+  color: #ffffff;
+}
+
+.travellers__text br {
+  display: none;
+}
+
+.travellers__list {
+  display: flex;
+  flex-direction: column;
+  .discard;
+  margin-bottom: 20px;
+}
+
+.travellers__list > li:first-child {
+  margin-bottom: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .travellers {
+    z-index: 7;
+    margin-top: -100px;
+    padding-top: 100px;
+    padding-bottom: 69px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-image: url("../img/blue-back-mobile.svg"), url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 213px 213px, 143px 143px, 285px 285px;
+    background-position: 39px 179px, 39px 526px, 407px 180px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/blue-back-mobile.svg"), url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-desktop@2x.png");
+    }
+  }
+
+  .travellers__top-wrapper {
+    .discard;
+    margin-top: 142px;
+    margin-left: 33px;
+    margin-bottom: 58px;
+  }
+
+  .travellers__caption {
+    margin-bottom: 37px;
+    .fonts(45px,45px,600);
+  }
+
+  .travellers__slogan {
+    margin-left: 2px;
+    padding-right: 200px;
+    .fonts(28px,33px,400);
+  }
+
+  .travellers__slogan br {
+    display: inline;
+  }
+
+  .travellers__text {
+    .discard;
+    box-sizing: border-box;
+    margin-top: 11px;
+    margin-left: 2px;
+    width: 265px;
+    .fonts(21px,25px,600);
+  }
+
+  .travellers__text br {
+    display: inline;
+  }
+
+  .travellers__list {
+    flex-direction: row;
+    margin-left: 35px;
+    margin-bottom: 70px;
+  }
+
+  .travellers__link {
+    margin: 0 auto;
+    padding-left: 30px;
+    width: 618px;
+    height: 81px;
+    .fonts(24px,24px,600);
+    border-radius: 20px;
+  }
+
+  .travellers__list > li:first-child {
+    margin-right: 12px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .travellers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 106px;
+    background-image: url("../img/blue-back-mobile.svg"), url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 213px 213px, 143px 143px, 285px 285px;
+    background-position: 58px 168px, 546px 233px, 190px 485px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/blue-back-mobile.svg"), url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-desktop@2x.png");
+    }
+  }
+
+  .travellers__top-wrapper {
+    .discard;
+    margin-top: 129px;
+    margin-left: 68px;
+    width: 630px;
+  }
+
+  .travellers__list {
+    .discard;
+    margin-left: -8px;
+    margin-top: 133px;
+    justify-content: space-between;
+    width: 630px;
+  }
+
+  .travellers__link {
+    .discard;
+    margin-top: -90px;
+    margin-left: 71px;
+    padding-left: 30px;
+    width: 280px;
+  }
+}

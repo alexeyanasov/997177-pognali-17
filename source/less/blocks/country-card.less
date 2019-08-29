@@ -1,0 +1,200 @@
+.country-card {
+  display: flex;
+}
+
+.country-card__wrapper {
+  text-decoration: none;
+}
+
+.country-card__image {
+  position: relative;
+}
+
+.country-card__description {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: -16px;
+  z-index: 10;
+  width: 270px;
+  height: 90px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.country-card__title {
+  display: block;
+  .discard;
+  margin-top: 27px;
+  margin-left: 24px;
+  .fonts(21px,21px,700);
+  width: 100px;
+}
+
+.country-card__slogan {
+  display: block;
+  .discard;
+  margin-left: 25px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  .fonts(16px,16px,500);
+  color: #c7c7c7;
+}
+
+.country-card__users {
+  display: block;
+  position: relative;
+  margin-top: 31px;
+  padding-right: 25px;
+  margin-left: auto;
+  width: 40px;
+  text-align: right;
+  color: #c7c7c7;
+}
+
+.country-card__users::before {
+  position: absolute;
+  content: " ";
+  top: 2px;
+  left: -18px;
+  width: 20px;
+  height: 10px;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+}
+
+.destinations__list-item:last-of-type .country-card__users::before {
+  position: absolute;
+  content: " ";
+  top: 2px;
+  left: -10px;
+  width: 20px;
+  height: 10px;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+}
+
+.country-card__flag {
+  position: absolute;
+  top: -11px;
+  left: 25px;
+  width: 35px;
+  height: 24px;
+  border-radius: 3px;
+  background-size: 35px 24px;
+  background-repeat: no-repeat;
+}
+
+.country-card__flag--tai {
+  background-image: url("../img/flag-thailand.svg");
+}
+
+.country-card__flag--france {
+  background-image: url("../img/flag-france.svg");
+}
+
+.country-card__flag--czech {
+  background-image: url("../img/flag-czech.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .country-card {
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  .country-card__wrapper {
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 35px;
+    padding-right: 35px;
+    width: 688px;
+  }
+
+  .country-card__description {
+    order: -1;
+    margin: 0;
+    width: 434px;
+    height: 140px;
+  }
+
+  .country-card__title {
+    .discard;
+    margin-top: 30px;
+    margin-left: 30px;
+    .fonts(24px,24px,600);
+  }
+
+  .country-card__slogan {
+    .discard;
+    margin-top: 7px;
+    margin-left: 30px;
+    .fonts(20px,17.68px,500);
+  }
+
+  .country-card__image {
+    width: 186px;
+    height: 140px;
+    border-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .country-card__flag {
+    top: 16px;
+    left: 398px;
+    width: 70px;
+    height: 47px;
+    border-radius: 5px;
+    background-size: 70px 47px;
+  }
+
+  .country-card__users {
+    .discard;
+    margin-top: 15px;
+    margin-left: 60px;
+    .fonts(20px,30px,400);
+    text-align: left;
+    color: #c7c7c7;
+  }
+
+  .country-card__users::before {
+    left: -30px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .destinations__list-item:last-of-type .country-card__users::before {
+    top: 2px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .country-card__wrapper {
+    .discard;
+    margin-left: 71px;
+  }
+
+  .country-card__description {
+    width: 373px;
+    border-radius: 20px;
+  }
+
+  .country-card__title {
+    margin-top: 24px;
+  }
+
+  .country-card__slogan {
+    margin-bottom: 7px;
+  }
+
+  .country-card__flag {
+    top: 23px;
+    left: 338px;
+  }
+}

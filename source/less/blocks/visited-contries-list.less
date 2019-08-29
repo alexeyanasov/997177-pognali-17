@@ -1,0 +1,54 @@
+.visited-contries-list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 245px;
+  list-style: none;
+}
+
+.visited-contries-list__item {
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 10px;
+  .fonts(15px,18px,500);
+  text-transform: uppercase;
+}
+
+.visited-contries-list__item--shri::before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+
+  width: 26px;
+  height: 18px;
+
+  background-image: url("../img/flags-back@1x.png");
+  border: 1px solid red;
+}
+
+.visited-contries-list__item--tai::before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+
+  width: 26px;
+  height: 18px;
+
+  background-image: url("../img/flags-back@1x.png");
+  border: 1px solid red;
+}
+
+.visited-contries-list__item--seych::before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+
+  width: 26px;
+  height: 18px;
+
+  background-image: url("../img/flags-back@1x.png");
+  border: 1px solid red;
+}

@@ -1,0 +1,64 @@
+.button-show-all {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 2px;
+  .fonts(18px,18px,700);
+  width: 270px;
+  height: 62px;
+  text-decoration: none;
+  background-color: #ffd74b;
+  border: 3px solid transparent;
+  color: #1d2e5b;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #192144;
+    color: #ffffff;
+  }
+
+  &:active {
+    color: #5e647c;
+  }
+}
+
+/*.button-show-all::before {
+  content: " ";
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  width: 10px;
+  height: 14px;
+  background-image: url("../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+}*/
+
+.button-show-all::before {
+  content: " ";
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #1d2e5b;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.button-show-all:hover::before {
+  border-left: 10px solid #ffffff;
+}
+
+.button-show-all:active::before {
+  border-left: 10px solid #5e647c;
+}
+
+@media (min-width: @tablet-width) {
+  .button-show-all::before {
+    top: 30px;
+    right: 33px;
+  }
+}
