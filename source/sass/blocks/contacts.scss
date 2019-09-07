@@ -1,99 +1,47 @@
 .contacts {
-  @include list-none;
+  position: relative;
+  margin-top: -30px;
+  z-index: 2;
+}
+
+.contacts__subscribe {
+  background-color: #192144;
+  position: relative;
+  padding-top: 75px;
+  padding-bottom: 23px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  z-index: 3;
+}
+
+.contacts__title {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
   text-align: center;
-
-  &--menu {
-    margin-bottom: 40px;
-  }
+  color: #ff8d30;
+  margin-bottom: 20px;
 }
 
-.contacts__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-}
-
-.contacts__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45px;
-  height: 45px;
-  margin-right: 17px;
-  border-radius: 50%;
-  background-color: $bg-icon;
-}
-
-.contacts__icon-image{
-  &--phone {
-    width: 20px;
-    height: 18px;
-  }
-  &--email {
-    width: 18px;
-    height: 13px;
-  }
-}
-
-.contacts__link {
-  display: block;
-  vertical-align: top;
-  color: $bg-blue-color;
-}
-
-@include respond-above($tablet) {
-  .contacts--menu {
-    padding-left: 55px;
-    margin-bottom: 110px;
-  }
-
-  .contacts__icon {
-    width: 67px;
-    height: 67px;
-
-    &-image--phone {
-      width: 27px;
-      height: 27px;
-    }
-
-    &-image--email {
-      width: 27px;
-      height: 19px;
-    }
-  }
-
-  .contacts__link {
-    font-size: 28px;
-    line-height: 28px;
-  }
-}
-
-@include respond-above($desktop) {
+@media (min-width: $tablet) {
   .contacts {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    margin-top: -50px;
   }
 
-  .contacts__item {
-    margin-right: 111px;
-    margin-bottom: 10px;
-  }
-
-  .contacts__icon {
-    width: 90px;
-    height: 90px;
-    margin-right: 33px;
-
-    &-image--phone {
-      width: 36px;
-      height: 36px;
-    }
-
-    &-image--email {
-      width: 36px;
-      height: 26px;
-    }
+  .contacts__title {
+    font-size: 45px;
+    margin-bottom: 58px;
   }
 }
+
+@media (min-width: $desktop) {
+  .contacts__title {
+    margin-top: 0;
+  }
+}
+
+@import "subscribe";
+@import "map";
